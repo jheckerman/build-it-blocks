@@ -1,1 +1,1 @@
-<?php $con=mysqli_connect("localhost", "root", "", "builditblocks"); ?>
+<?php $con=mysqli_connect("localhost", "root", "root", "builditblocks"); ?>
