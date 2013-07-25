@@ -20,6 +20,8 @@
 		var titleArr = new Array(); //contains all application titles
 		var descriptionArr = new Array (); ////contains all application descriptions
 		var stepArr = new Array(); //contains all instruction text
+		var animating=false; //boolean to check if animations are true
+		var delay_speed=900; //speed of the delay for text; used in gotoNextStep() and gotoPrevStep()
 		
 
 		<?php
@@ -60,23 +62,36 @@
 		}
 		
 		function gotoNextStep(){
-			step++;
-			if(step>maxStep) step=0;
-			var newStep = stepArr[step];
-			step++;		//step is used as an index for an array. When step = 0, Step 1 should be showing.
-			document.getElementById("caption2").innerHTML="<h4> Step: " + step + "</h4>"  + newStep;
-			step--;
+			if (!animating){
+				animating=true;
+				setTimeout( function() {
+					step++;
+					if(step>maxStep) step=0;
+					var newStep = stepArr[step];
+					step++;		//step is used as an index for an array. When step = 0, Step 1 should be showing.
+					document.getElementById("caption2").innerHTML="<h4> Step: " + step + "</h4>"  + newStep;
+					step--;
+					animating=false;
+				},delay_speed);
+			}
 		}
 		
 		function gotoPrevStep(){
-			step--;
-			if(step<0) step=maxStep;
-			var newStep = stepArr[step];
-			step++;		//step is used as an index for an array. When step = 0, Step 1 should be showing.
-			document.getElementById("caption2").innerHTML="<h4> Step: " + step + "</h4>"  + newStep;
-			step--;
+		
+			if (!animating){
+				animating=true;
+				setTimeout( function() {
+					step--;
+					if(step<0) step=maxStep;
+					var newStep = stepArr[step];
+					step--;		//step is used as an index for an array. When step = 0, Step 1 should be showing.
+					document.getElementById("caption2").innerHTML="<h4> Step: " + step + "</h4>"  + newStep;
+					step++;
+					animating=false;
+				},delay_speed);
+			}
 		}
-			
+													 
 			 
 		function HideInstr(){
 		$(document).ready(function() {
@@ -187,11 +202,17 @@
       
     }
     
+    
+    //BIY intern code:
     #c1 {
     	width: 475px;
     }
     #c2 {
     	width:475px;
+    }
+    
+    #caption2 {
+    	height:330px;
     }
     
     
@@ -257,9 +278,6 @@
   </div>      	
   </div>
   <div id="instr">
-    <div class="back-button" onClick="HideInstr()">
-	Go Back!
-  </div>
   <div style="width:800px; border:solid red 1px">
   	<div class="container" id="c2">
   		<div id="slides2" style="border:solid 1px">
@@ -288,9 +306,13 @@
 				gotoPrevStep();
 			</script>
        	</div>
-		
+       	
+       	<div onClick="HideInstr()">
+			<img src="images/overview-button.png" width="160px"/>
+    	</div>
   
   </div>
+  
 
   <!-- SlidesJS Required: Link to jQuery -->
   <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
@@ -336,3 +358,4 @@
   <div style="clear:both"><?php include("../biy-bottom-info.html"); ?></div
 </body>
 </html>
+
