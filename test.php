@@ -41,5 +41,9 @@
   		<li><img src="http://farm5.static.flickr.com/4123/4857419001_7a164a78fb_z.jpg" /></li>
   		<li><img src="http://1.bp.blogspot.com/-f7zGhUmBkO0/TVlbCn64wFI/AAAAAAAAAgg/zWI7HOANnDU/s400/Red-Panda9.jpg" /></li>
 	</ul>
+<div style="color:red;">yep. this is josh</div>
 </body>
+
+
+<div></div>
 </html>
