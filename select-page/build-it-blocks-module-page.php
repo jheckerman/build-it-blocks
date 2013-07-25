@@ -270,8 +270,9 @@
 				$temp = mysqli_query($con, "SELECT * FROM `steps` WHERE `moduleID`=" . $module); //get the rows
 				while($array = mysqli_fetch_array($temp)){
 					echo "<div id=\"instructions-slider\" style=\"border:solid 1px; width:800px\">";
-						echo "\n<div class=\"img_wrapper\"><img src=\"../" .$array['image-path'] ."\" alt=\"\" style=\"width:450px; float:left; \"></div>\n";
-
+						echo "\n<div class=\"img_wrapper\" style=\"\">
+							<img src=\"../" .$array['image-path'] ."\" alt=\"\">
+						</div>\n";
 					echo "</div>";
 				}
 				mysqli_close($con);
