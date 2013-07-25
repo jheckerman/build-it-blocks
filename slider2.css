@@ -1,0 +1,142 @@
+.body-content {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+/* Simply floating both columns to the left like we did during the webcast causes one of the columns
+	to "wrap" around the other if they have different heights. Instead, we give the right column (.main-content)
+	a large amount of padding on its left side, and give the sidebar absolute positioning. This way, the sidebar
+	sits on top of the right column's padding. */
+/* Another way to accomplish this task is to float the right column to the right (float: right) and make
+	sure that the widths of the two columns add up to the same width as their container. */
+.sidebar {
+    width: 310px;
+    position: absolute;
+	text-align: center;
+}
+.main-content {
+    padding-left: 310px;
+    padding-top: 24px;
+	text-align: left;
+}
+
+
+div#content
+{
+	width: 800px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+	overflow: hidden;
+}
+
+div#content h3 { text-align: center; }
+
+
+/**
+ * slider2
+ **/
+
+div#slide_panel
+{
+	width: 700px;
+	margin: 0 auto;
+}
+
+div#slide_panel div.left_button,
+div#slide_panel div.right_button
+{
+	position: relative;
+}
+
+div#slide_panel div.left_button a,
+div#slide_panel div.right_button a
+{
+	position: absolute;
+	top: 115px;
+	width: 24px;
+	height: 39px;
+	text-indent: -999999px;
+}
+
+div#slide_panel div.left_button a
+{
+	left: -40px;
+	background: url("images/arrow-left.png");
+}
+
+div#slide_panel div.right_button a
+{
+	right: -40px;
+	background: url("images/arrow-right.png");
+}
+
+div#slide_panel ul.slider2
+{
+	width: 700px;
+	height: 420px;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	overflow: hidden;
+}
+div#slide_panel ul.slider2 li 
+{
+	display: block;
+	height: 250px;
+	margin: 0;
+	padding: 0;
+}
+
+div#slide_panel ul.slider2 li div.img_wrapper
+{
+	float: left;
+	width: 390px;
+	vertical-align: middle;
+	padding: 10px 0;
+	text-align: center;
+}
+
+div#slide_panel ul.slider2 li div.caption
+{
+	float: right;
+	width: 300px;
+	padding: 20px 0;
+}
+
+div#slide_panel ul.slider2 li h4
+{
+	font-family: verdana, sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+	color: #000000;
+}
+
+div#slide_panel ul.slider2 li p
+{
+	font-family: verdana, sans-serif;
+	font-size: 1em;
+	font-weight: normal;
+	color: #808080;
+}
+
+div#slide_panel div.bx-pager { margin: 10px; text-align: center; }
+div#slide_panel div.bx-pager a
+{
+	font-family: verdana, sans-serif;
+	padding: 5px;
+	color: #838383;
+}
+
+div#slide_panel .bx-pager .pager-active,
+div#slide_panel .bx-pager a:hover
+{
+  color: #de312a;
+}
+
+div#slide_panel .bx-pager .pager-active,
+div#slide_panel .bx-pager a:hover
+{
+  color: #de312a;
+}

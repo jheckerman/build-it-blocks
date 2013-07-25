@@ -1,0 +1,126 @@
+body{
+	background-color: #FFFFFF;
+}
+
+.module-title {
+	font-family: verdana, sans-serif;
+	font-size: 3em;
+	font-weight: normal;
+	color: #808080;
+	margin: 0px 0px,0px, 0px;
+	padding: 0px 0px,0px, 0px;
+	}
+	
+.module-subtitle {
+	font-family: verdana, sans-serif;
+	font-size: 1em;
+	font-weight: normal;
+	color: #404040;
+	margin: -100px 0px,0px, 0px;
+	padding: 0px 0px,0px, 0px;
+	}
+
+h1 {
+	font-family: verdana, sans-serif;
+	font-size: .85em;
+	font-weight: normal;
+	color: #808080;
+	margin: 0px 0px,0px, 0px;
+	padding: 0px 0px,0px, 0px;
+	} 				
+		
+h5 {
+	font-family: verdana, sans-serif;
+	font-size: .85em;
+	font-weight: normal;
+	color: #ff0000;
+	margin: 0px 0px,0px, 0px;
+	padding: 0px 0px,0px, 0px;
+	} 				
+		
+h2 {
+	font-family: verdana, sans-serif;
+	font-size: 1.0em;
+	font-weight: normal;
+	color: #000000;
+	margin: 0px 0px,0px, 0px;
+	padding: 0px 0px,0px, 0px;
+	} 				
+		
+h3 {
+	font-family: verdana, sans-serif;
+	font-size: 1.0em;
+	font-weight: normal;
+	color: #808080;
+	margin: 0px 0px,0px, 0px;
+	padding: 0px 0px,0px, 0px;
+	} 				
+		
+h4 {
+	font-family: verdana, sans-serif;
+	font-size: 1.0em;
+	font-weight: normal;
+	color: #0000ff;
+	margin: 0px 0px,0px, 0px;
+	padding: 0px 0px,0px, 0px;} 
+
+a:link{
+	color:#404040;
+	text-decoration: none;
+	font-family:"verdana", verdana, sans-serif;
+}
+
+a:visited
+{
+	color:#404040;
+	text-decoration: none;
+	font-family:"verdana", verdana, sans-serif;
+}
+
+a:hover
+{
+	text-decoration: bold;
+	font-family:"verdana", verdana, sans-serif;
+}
+
+.link {
+	color:#404040;
+	font-family:"verdana", verdana, sans-serif;
+}
+
+.hover-link{
+	color:#4040ff;
+	font-family:"verdana", verdana, sans-serif;
+	text-decoration: bold;
+}
+
+.t2{
+	font-size:16pt;
+	font-weight:bold;
+}
+
+.center-title {
+	align:center;
+	text-align:center;
+	font-size: 26pt;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.center-smaller {
+	align:center;
+	text-align:center;
+	font-size: 14pt;
+	font-family:"verdana", verdana, sans-serif;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.menu-button{
+	padding-top:10px;
+	background-image: url(images/button-up.png);
+	width: 110px;
+	height: 28px;
+	font-family:"verdana", verdana, sans-serif;
+	font-size:9pt;
+}
