@@ -130,11 +130,7 @@
 	<div id="redline" style="background-color:#EB0000; height:1px; width:100px; float:left; position:relative; display:none;"> </div>
 </div>
 <br>
-<<<<<<< HEAD
 <div style="height:100px; width:800px; background-color:#FFFFFF; margin-left:auto; margin-right:auto; margin-top:-30px;">
-=======
-<div style="height:100px; width:800px; background-color:#FFFFFF; margins:auto; margin-top:-30px;">
->>>>>>> parent of 5873faa... Revert "Revert "Revert "Revert "Revert "Revert "navigation bar fixes (table/td's ->ul/li's)""""""
 	<ul type="none" id="menu-jquery" style="margin-left:-25px">
 		<?php
 		include("../db-connect.php");
@@ -153,13 +149,7 @@
 	$("#menu-jquery li").show(300); //some animation to display categories
 </script>
 
-<<<<<<< HEAD
 	<div style="height:1px; width:800px; background-color:#404040; margin-left:auto; margin-right:auto; margin-top:-72px;"></div>
-=======
-	<div style="height:1px; width:800px; background-color:#404040; margins:auto; margin-top:-72px;">
-	
-	</div>
->>>>>>> parent of 5873faa... Revert "Revert "Revert "Revert "Revert "Revert "navigation bar fixes (table/td's ->ul/li's)""""""
 	<div id="content" style="width:800px; height:600px; margin-bottom:50px; margins:auto;" >
 
 	</div>
