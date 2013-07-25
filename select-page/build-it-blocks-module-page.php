@@ -202,11 +202,17 @@
       
     }
     
+    
+    //BIY intern code:
     #c1 {
     	width: 475px;
     }
     #c2 {
     	width:475px;
+    }
+    
+    #caption2 {
+    	height:330px;
     }
     
     
@@ -272,9 +278,6 @@
   </div>      	
   </div>
   <div id="instr">
-    <div class="back-button" onClick="HideInstr()">
-	Go Back!
-  </div>
   <div style="width:800px; border:solid red 1px">
   	<div class="container" id="c2">
   		<div id="slides2" style="border:solid 1px">
@@ -303,7 +306,10 @@
 				gotoPrevStep();
 			</script>
        	</div>
-		
+       	
+       	<div onClick="HideInstr()">
+			<img src="images/overview-button.png" width="160px"/>
+    	</div>
   
   </div>
   
