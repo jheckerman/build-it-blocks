@@ -10,8 +10,8 @@
 	</script>
 </head>
 <body>
-	<div style="width:800px; margin-left:auto; margin-right:auto; clear:both">
-		  <ul style="margin:0px;  list-style-type:none; float:left; height:80px; width:800px; padding:0px; text-align:center; clear:both">
+	<div style="width:800px; margin-left:auto; margin-right:auto; clear:both;">
+		  <ul style="margins:0px;  list-style-type:none; float:left; height:80px; width:800px; padding:0px; text-align:center;">
 			  <li style="float:left; width:250px">
 				  <a href="http://build-it-yourself.com"><img src="images/biy-logo.gif"></a>
 			  </li>
@@ -56,6 +56,7 @@
 			  </li> 
 		  </ul>
 	  </div>
-	  <div style="height:1px; width:800px; background-color:#404040; margin-left:auto; margin-right:auto; margin-bottom:-4px; margin-top:-25px; clear:both"> </div>
+	  <div style="height:1px; width:800px; background-color:#404040; margin-left:auto; margin-right:auto; margin-bottom:-4px; margin-top:0px; clear:both"> </div>
+	  <span style="clear:none;"> </span>
 </body>
 </html>
