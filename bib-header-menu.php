@@ -10,7 +10,7 @@
 	</script>
 </head>
 <body>
-	<div style="width:800px; margin-left:auto; margin-right:auto; clear:both">
+	<div style="width:800px; margin-left:auto; margin-right:auto">
 		  <ul style="margin:0px;  list-style-type:none; float:left; height:80px; width:800px; padding:0px; text-align:center; clear:both">
 			  <li style="float:left; width:250px">
 				  <a href="http://build-it-yourself.com"><img src="images/biy-logo.gif"></a>
