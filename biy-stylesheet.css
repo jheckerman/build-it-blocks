@@ -124,3 +124,8 @@ a:hover
 	font-family:"verdana", verdana, sans-serif;
 	font-size:9pt;
 }
+
+.back-button{
+	width:100px;
+	background-color:green;
+}

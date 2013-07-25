@@ -15,11 +15,13 @@
   <!-- End CSS for slidesjs.com example -->
 
 	<script type="text/javascript">
-		var row=1;
-		var titleArr = new Array(); 
-		var descriptionArr = new Array ();
-		//ONLINE editing efficiency test
+		var row=1; //variable that tracks which application you are on
+		var step=1; //variable that tracks which step you are on
+		var titleArr = new Array(); //contains all application titles
+		var descriptionArr = new Array (); ////contains all application descriptions
+		var stepArr = new Array(); //contains all instruction text
 		
+
 		<?php
 			include("../db-connect.php");
 			$module = $_GET["id"];
@@ -30,11 +32,18 @@
 				echo "descriptionArr[".$i."]='" . $app['description'] . "';" ;
 				$i++;
 			}
+			$temp = mysqli_query($con, "SELECT * FROM `steps` WHERE `moduleID`=" . $module); //get the rows
+			$i=0;
+			while($steps = mysqli_fetch_array($temp)){
+				echo "stepArr[".$i."]='" . $steps['step-description'] . "';" ;
+				$i++;
+			}
 		?>
 		
 		var maxR=titleArr.length-1;
+		var maxStep=stepArr.length-1;
 		
-		function gotoNext(){
+		function gotoNextApp(){
 			row++;
 			if(row>maxR) row=0;
 			var newTitle = titleArr[row];
@@ -42,12 +51,30 @@
 			document.getElementById("caption").innerHTML="<h4>" + newTitle + "</h4>"  + newDescrip;
 		}
 		
-		function gotoPrev(){
+		function gotoPrevApp(){
 			row--;
 			if(row<0) row=maxR;
 			var newTitle = titleArr[row];
 			var newDescrip = descriptionArr[row];
 			document.getElementById("caption").innerHTML="<h4>" + newTitle + "</h4>"  + newDescrip;
+		}
+		
+		function gotoNextStep(){
+			step++;
+			if(step>maxStep) step=0;
+			var newStep = stepArr[step];
+			step++;		//step is used as an index for an array. When step = 0, Step 1 should be showing.
+			document.getElementById("caption2").innerHTML="<h4> Step: " + step + "</h4>"  + newStep;
+			step--;
+		}
+		
+		function gotoPrevStep(){
+			step--;
+			if(step<0) step=maxStep;
+			var newStep = stepArr[step];
+			step++;		//step is used as an index for an array. When step = 0, Step 1 should be showing.
+			document.getElementById("caption2").innerHTML="<h4> Step: " + step + "</h4>"  + newStep;
+			step--;
 		}
 			
 			 
@@ -70,7 +97,6 @@
 	
 	<!--SlidesJS stuff vvv -->
   <style>
-
     #slides,
     #slides2,
     #slides3 {
@@ -165,7 +191,7 @@
     	width: 475px;
     }
     #c2 {
-    	width:800px;
+    	width:475px;
     }
     
     
@@ -193,6 +219,8 @@
 	<div style="height:1px; width:800px; background-color:#404040; margin-bottom:-4px;"> </div>
 	<br/>
   </div>
+  
+
   <div id="overview">
   	<div style="width:800px; border:solid red 1px">
   		<div class="container" id="c1">
@@ -209,8 +237,8 @@
 				}
 				mysqli_close($con);
 				?>	
-      			<a href="#" class="slidesjs-previous slidesjs-navigation" onClick="gotoPrev()"><i class="icon-chevron-left icon-large"></i></a>
-      			<a href="#" class="slidesjs-next slidesjs-navigation" onClick="gotoNext()"><i class="icon-chevron-right icon-large"></i></a>
+      			<a href="#" class="slidesjs-previous slidesjs-navigation" onClick="gotoPrevApp()"><i class="icon-chevron-left icon-large"></i></a>
+      			<a href="#" class="slidesjs-next slidesjs-navigation" onClick="gotoNextApp()"><i class="icon-chevron-right icon-large"></i></a>
       		</div>
 		</div>
     <div style="display:inline-block">
@@ -220,15 +248,18 @@
     	</div>
     	
     </div>
-    <div id="caption">
-        		<script>
-        			gotoPrev(); //
-        		</script>
-        	</div>
+		<div id="caption">
+       		<script>
+        			gotoPrevApp(); //row initiated as 1
+       		</script>
+       	</div>
   
   </div>      	
   </div>
   <div id="instr">
+    <div class="back-button" onClick="HideInstr()">
+	Go Back!
+  </div>
   <div style="width:800px; border:solid red 1px">
   	<div class="container" id="c2">
   		<div id="slides2" style="border:solid 1px">
@@ -240,21 +271,24 @@
 				while($array = mysqli_fetch_array($temp)){
 					echo "<div id=\"instructions-slider\" style=\"border:solid 1px; width:800px\">";
 						echo "\n<div class=\"img_wrapper\"><img src=\"../" .$array['image-path'] ."\" alt=\"\" style=\"width:450px; float:left; \"></div>\n";
-						echo "<div style=\"float:left; width:325px; margin-left:15px \">\n";
-						echo "<div style=\"margin:auto\">";
-						echo "\t<h4> Step" . $array['step-number'] . "</h4>\n";
-						echo "\t\t<p>". $array['step-description'] ."</p>\n";
-						echo "</div>";
-						echo "\t</div>";
+
 					echo "</div>";
 				}
 				mysqli_close($con);
 		?>
-  		<a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left icon-large"></i></a>
-      	<a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right icon-large"></i></a>
+		
+  		<a href="#" class="slidesjs-previous slidesjs-navigation" onClick="gotoPrevStep()"><i class="icon-chevron-left icon-large"></i></a>
+      	<a href="#" class="slidesjs-next slidesjs-navigation" onClick="gotoNextStep()"><i class="icon-chevron-right icon-large"></i></a>
   		</div>
   	</div>
-  </div>
+	</div>
+		<div id="caption2">
+			<script>
+				gotoPrevStep();
+			</script>
+       	</div>
+		
+  
   </div>
 
   <!-- SlidesJS Required: Link to jQuery -->
@@ -282,8 +316,8 @@
   <script>
     $(function() {
       $('#slides2').slidesjs({
-      	width: 800,
-        height: 480,
+      	width: 475,
+        height: 350,
         navigation: false
       });
     });
