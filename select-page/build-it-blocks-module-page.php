@@ -18,6 +18,7 @@
 		var row=1;
 		var titleArr = new Array(); 
 		var descriptionArr = new Array ();
+		//ONLINE editing efficiency test
 		
 		<?php
 			include("../db-connect.php");
@@ -50,7 +51,6 @@
 		}
 			
 			 
-
 		function HideInstr(){
 		$(document).ready(function() {
 			document.getElementById("instr").style.display="none";
