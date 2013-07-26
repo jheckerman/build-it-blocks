@@ -242,76 +242,76 @@
   </div>
   
 
-  <div id="overview">
-  	<div style="width:800px; border:solid red 1px">
-  		<div class="container" id="c1">
-    		<div id="slides" style="border:solid 1px">
-    			<?php
-				include("../db-connect.php");
-				$module = $_GET["id"];
-				$temp = mysqli_query($con, "SELECT * FROM `applications` WHERE `moduleID`=" . $module); //get the rows
-				while($app = mysqli_fetch_array($temp)){
-				echo "
-				<div class=\"img_wrapper\">
-				<img src=\"../" .$app['picture'] ." \"alt=\" \">
-				</div>";
-				}
-				mysqli_close($con);
-				?>	
-      			<a href="#" class="slidesjs-previous slidesjs-navigation" onClick="gotoPrevApp()"><i class="icon-chevron-left icon-large"></i></a>
-      			<a href="#" class="slidesjs-next slidesjs-navigation" onClick="gotoNextApp()"><i class="icon-chevron-right icon-large"></i></a>
-      		</div>
-		</div>
-    <div style="display:inline-block">
-    	<br/>
-    	<div id="build-button" onClick= "DisplayInstr()" style="width:300px; margin:auto">
-    	<img src="images/build-it.png" width="300px"/>
-    	</div>
-    	
-    </div>
-		<div id="caption">
-       		<script>
-        			gotoPrevApp(); //row initiated as 1
-       		</script>
-       	</div>
-  
-  </div>      	
-  </div>
-  <div id="instr">
-  <div style="width:800px; border:solid red 1px">
-  	<div class="container" id="c2">
-  		<div id="slides2" style="border:solid 1px">
-		<?php
-
-				include("../db-connect.php");
-				$module = $_GET["id"];
-				$temp = mysqli_query($con, "SELECT * FROM `steps` WHERE `moduleID`=" . $module); //get the rows
-				while($array = mysqli_fetch_array($temp)){
-					echo "<div id=\"instructions-slider\" style=\"border:solid 1px; width:800px\">";
-						echo "\n<div class=\"img_wrapper\" style=\"\">
-							<img src=\"../" .$array['image-path'] ."\" alt=\"\">
-						</div>\n";
-					echo "</div>";
-				}
-				mysqli_close($con);
-		?>
-		
-  		<a href="#" class="slidesjs-previous slidesjs-navigation" onClick="gotoPrevStep()"><i class="icon-chevron-left icon-large"></i></a>
-      	<a href="#" class="slidesjs-next slidesjs-navigation" onClick="gotoNextStep()"><i class="icon-chevron-right icon-large"></i></a>
-  		</div>
-  	</div>
+	<div id="overview">
+		<div style="width:800px; border:solid red 1px">
+			<div class="container" id="c1">
+				<div id="slides" style="border:solid 1px;" >
+					<?php
+						include("../db-connect.php");
+						$module = $_GET["id"];
+						$temp = mysqli_query($con, "SELECT * FROM `applications` WHERE `moduleID`=" . $module); //get the rows
+						while($app = mysqli_fetch_array($temp)){
+							echo "
+							<div class=\"img_wrapper\">
+								<img src=\"../" .$app['picture'] ." \"alt=\" \" style=\"max-height:100%\">
+							</div>";
+							}
+						mysqli_close($con);
+					?>	
+					<a href="#" class="slidesjs-previous slidesjs-navigation" onClick="gotoPrevApp()"><i class="icon-chevron-left icon-large"></i></a>
+					<a href="#" class="slidesjs-next slidesjs-navigation" onClick="gotoNextApp()"><i class="icon-chevron-right icon-large"></i></a>
+				</div>
+			</div>
+			
+			<div style="display:inline-block">
+				<br/>
+				<div id="build-button" onClick= "DisplayInstr()" style="width:300px; margin:auto">
+					<img src="images/build-it.png" width="300px"/>
+				</div>
+			</div>
+			
+			<div id="caption">
+				<script>
+						gotoPrevApp(); //row initiated as 1
+				</script>
+			</div>
+	  
+		</div>      	
 	</div>
+	<div id="instr">
+		<div style="width:800px; border:solid red 1px">
+			<div class="container" id="c2">
+				<div id="slides2" style="border:solid 1px">
+					<?php
+						include("../db-connect.php");
+						$module = $_GET["id"];
+						$temp = mysqli_query($con, "SELECT * FROM `steps` WHERE `moduleID`=" . $module); //get the rows
+						while($array = mysqli_fetch_array($temp)){
+							echo "<div id=\"instructions-slider\" style=\"border:solid 1px; width:800px\">";
+								echo "
+									\n<div class=\"img_wrapper\">
+										<img src=\"../" .$array['image-path'] ."\" alt=\"\" style=\"max-height:100%\">
+									</div>\n";
+							echo "</div>";
+						}
+						mysqli_close($con);
+					?>
+					<a href="#" class="slidesjs-previous slidesjs-navigation" onClick="gotoPrevStep()"><i class="icon-chevron-left icon-large"></i></a>
+					<a href="#" class="slidesjs-next slidesjs-navigation" onClick="gotoNextStep()"><i class="icon-chevron-right icon-large"></i></a>
+				</div>
+			</div>
+		</div>
 		<div id="caption2">
 			<script>
 				gotoPrevStep();
 			</script>
-       	</div>
-       	
-       	<div onClick="HideInstr()">
+		</div>
+			
+		<div onClick="HideInstr()">
 			<img src="images/overview-button.png" width="160px"/>
-    	</div>
-  
-  </div>
+		</div>
+	  
+	</div>
   
 
   <!-- SlidesJS Required: Link to jQuery -->
