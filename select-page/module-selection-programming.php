@@ -77,7 +77,7 @@
 		function numberofCats(){ //counts the number of categories that type has
 			<?php
 			include("../db-connect.php");
-			$temp = mysqli_query($con, "SELECT * FROM `category_table` WHERE `typeID`= 4"); //typeID =4 for junk
+			$temp = mysqli_query($con, "SELECT * FROM `category_table` WHERE `typeID`= 4"); //typeID =4 for programming
 			
 			$counter=0;
 			while($info = mysqli_fetch_array( $temp )){
@@ -103,11 +103,11 @@
 					document.getElementById("content").innerHTML=xmlhttp.responseText;
 				}
 			}
-			xmlhttp.open("GET","../module-selection-modified.php?cat="+ subID +"&type=4",true); //type=4 always for junk
+			xmlhttp.open("GET","../module-selection-modified.php?cat="+ subID +"&type=4",true); //type=4 always for programming
 			xmlhttp.send();
 			
 			var categories = numberofCats(); 											//number of categories for this type
-			while(categories > 0){
+			while(categories >= 0){
 				document.getElementById("cat" + categories).className="button";
 				categories--;
 			}

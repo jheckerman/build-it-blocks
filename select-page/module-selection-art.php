@@ -14,7 +14,7 @@
 	text-align:center;
 	margin-left:10px;
 	margin-right:auto;
-	width:135px;
+	width:110px;
 	height:25px;
 	padding-top:3px;
 	font-family:"verdana", verdana, sans-serif;
@@ -27,7 +27,7 @@
 	text-align:center;
 	margin-left:10px;
 	margin-right:auto;
-	width:135px;
+	width:110px;
 	height:25px;
 	color:#EB0000;
 	padding-top:3px;
@@ -107,7 +107,7 @@
 			xmlhttp.send();
 			
 			var categories = numberofCats(); 											//number of categories for this type
-			while(categories > 0){
+			while(categories >= 0){
 				document.getElementById("cat" + categories).className="button";
 				categories--;
 			}
@@ -131,6 +131,8 @@
 <br>
 <div style="height:100px; width:800px; background-color:#FFFFFF; margin-left:auto; margin-right:auto; margin-top:-30px;">
 	<ul type="none" id="menu-jquery" style="margin-left:-25px">
+		<li id="cat0" class="button" style="display:none;" onClick="changeCategory(0,0)"> View All </li>
+
 		<?php
 		include("../db-connect.php");
 		$temp = mysqli_query($con, "SELECT * FROM `category_table` WHERE `typeID`= 3"); //typeID =3 for art

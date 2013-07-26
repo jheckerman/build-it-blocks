@@ -14,7 +14,7 @@
 	text-align:center;
 	margin-left:10px;
 	margin-right:auto;
-	width:135px;
+	width:110px;
 	height:25px;
 	padding-top:3px;
 	font-family:"verdana", verdana, sans-serif;
@@ -27,7 +27,7 @@
 	text-align:center;
 	margin-left:10px;
 	margin-right:auto;
-	width:135px;
+	width:110px;
 	height:25px;
 	color:#EB0000;
 	padding-top:3px;
@@ -77,7 +77,7 @@
 		function numberofCats(){ //counts the number of categories that type has
 			<?php
 			include("../db-connect.php");
-			$temp = mysqli_query($con, "SELECT * FROM `category_table` WHERE `typeID`= 5"); //typeID =4 for junk
+			$temp = mysqli_query($con, "SELECT * FROM `category_table` WHERE `typeID`= 5"); //typeID =5 for minecraft
 			
 			$counter=0;
 			while($info = mysqli_fetch_array( $temp )){
@@ -103,11 +103,11 @@
 					document.getElementById("content").innerHTML=xmlhttp.responseText;
 				}
 			}
-			xmlhttp.open("GET","../module-selection-modified.php?cat="+ subID +"&type=5",true); //type=4 always for junk
+			xmlhttp.open("GET","../module-selection-modified.php?cat="+ subID +"&type=5",true); //type=5 always for minecraft
 			xmlhttp.send();
 			
 			var categories = numberofCats(); 											//number of categories for this type
-			while(categories > 0){
+			while(categories >= 0){
 				document.getElementById("cat" + categories).className="button";
 				categories--;
 			}
@@ -131,9 +131,11 @@
 <br>
 <div style="height:100px; width:800px; background-color:#FFFFFF; margin-left:auto; margin-right:auto; margin-top:-30px;">
 	<ul type="none" id="menu-jquery" style="margin-left:-25px">
+		<li id="cat0" class="button" style="display:none;" onClick="changeCategory(0,0)"> View All </li>
+
 		<?php
 		include("../db-connect.php");
-		$temp = mysqli_query($con, "SELECT * FROM `category_table` WHERE `typeID`= 5"); //typeID =4 for programming
+		$temp = mysqli_query($con, "SELECT * FROM `category_table` WHERE `typeID`= 5"); //typeID =5 for minecraft
 		$counter=1; //used to label each category selection button as 1,2,3,4 ...
 		while($info = mysqli_fetch_array( $temp )){
 			echo "<li id=\"cat".$counter."\" class=\"button\" style='display:none;' onClick=\"changeCategory(" .$info['subcategoryID']. ",". $counter . ")\">". $info['name'] ."</li>";
