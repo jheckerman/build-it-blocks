@@ -367,7 +367,7 @@
   <!-- End SlidesJS Required -->
   
   
-  <div style="clear:both"><?php include("../biy-bottom-info.html"); ?></div
+  <div style="clear:both"><?php include("../biy-bottom-info.html"); ?></div>
 </body>
 </html>
 
