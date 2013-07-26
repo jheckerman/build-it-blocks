@@ -18,7 +18,16 @@
 			  <li style="float:left; width:250px">
 				  <a href="http://build-it-yourself.com"><img src="images/biy-logo.gif"></a>
 			  </li>
-			  <li style="float:left; width:110px">
+			  
+			  <li style="float:left;">
+				  <a href="../bib-main-page.php">
+					<div id="home" class="menu-button" onMouseOver="changeImage(this,'images/button-down.png')" onMouseOut="changeImage(this,'images/button-up.png')">
+						Blocks Home
+					</div>
+				  </a>
+			  </li>
+			  
+			  <li style="float:left;">
 				  <a href="module-selection-junk.php">
 					<div id="junk" class="menu-button" onMouseOver="changeImage(this,'images/button-down.png')" onMouseOut="changeImage(this,'images/button-up.png')">
 						Junk
@@ -26,7 +35,7 @@
 				  </a>
 			  </li>
 			  
-			  <li style="float:left; width:110px">
+			  <li style="float:left;">
 				  <a href="module-selection-lego.php">
 					<div id="lego" class="menu-button" onMouseOver="changeImage(this,'images/button-down.png')" onMouseOut="changeImage(this,'images/button-up.png')">
 						LEGO
@@ -34,7 +43,7 @@
 				  </a>
 			  </li>
 			  
-			  <li style="float:left; width:110px">
+			  <li style="float:left;">
 				  <a href="module-selection-art.php">
 					<div id="art" class="menu-button" onMouseOver="changeImage(this,'images/button-down.png')" onMouseOut="changeImage(this,'images/button-up.png')">
 						Art
@@ -42,7 +51,7 @@
 				  </a>
 			  </li>
 			  
-			  <li style="float:left; width:110px">
+			  <li style="float:left;">
 				  <a href="module-selection-programming.php">
 					<div id="programming" class="menu-button" onMouseOver="changeImage(this,'images/button-down.png')" onMouseOut="changeImage(this,'images/button-up.png')">
 						Programming
@@ -50,7 +59,7 @@
 				  </a>
 			  </li> 
 			  
-			  <li style="float:left; width:110px">
+			  <li style="float:left;">
 				  <a href="module-selection-minecraft.php">
 					<div id="minecraft" class="menu-button" onMouseOver="changeImage(this,'images/button-down.png')" onMouseOut="changeImage(this,'images/button-up.png')">
 						Minecraft
