@@ -11,7 +11,7 @@
 			$cat = $_GET["cat"];
 			$type = $_GET["type"];
 			if ($cat==0){
-				$data = mysqli_query($con, "SELECT * FROM `module_index`");
+				$data = mysqli_query($con, "SELECT * FROM `module_index` WHERE `type`= $type");
 			}
 			else{
 				$data = mysqli_query($con, "SELECT * FROM `module_index` WHERE `subcategoryID`= $cat AND `type`= $type");
