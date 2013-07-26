@@ -252,7 +252,7 @@
 						$temp = mysqli_query($con, "SELECT * FROM `applications` WHERE `moduleID`=" . $module); //get the rows
 						while($app = mysqli_fetch_array($temp)){
 							echo "
-							<div class=\"img_wrapper\">
+							<div class=\"img_wrapper\" style=\"height:100%\">
 								<img src=\"../" .$app['picture'] ." \"alt=\" \" style=\"max-height:100%\">
 							</div>";
 							}
@@ -289,7 +289,7 @@
 						while($array = mysqli_fetch_array($temp)){
 							echo "<div id=\"instructions-slider\" style=\"border:solid 1px; width:800px\">";
 								echo "
-									\n<div class=\"img_wrapper\">
+									\n<div class=\"img_wrapper\" style=\"height:100%\">
 										<img src=\"../" .$array['image-path'] ."\" alt=\"\" style=\"max-height:100%\">
 									</div>\n";
 							echo "</div>";
