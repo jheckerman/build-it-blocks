@@ -149,6 +149,8 @@
 </script>
 
 	<div style="height:1px; width:800px; background-color:#404040; margin-left:auto; margin-right:auto; margin-top:-72px;"></div>
-	<div id="content" style="width:800px; height:600px; margin-bottom:50px; margins:auto;" ></div>
+	<div id="content" style="width:800px; height:600px; margin-bottom:50px; margins:auto;" >
+
+	</div>
 </body>
 </html>
