@@ -27,7 +27,7 @@
 				$temp = mysqli_query($con, "SELECT `icon` FROM `module_index` WHERE `id`=". $info['ID']); 
 				$fetch = mysqli_fetch_array($temp); //fetches the data and puts it into an array
 				$img = $fetch['icon'];
-				echo "<td class='center-smaller' style='width:300px; height:150px;'> <a title= \"" .$info['description']. "\" href=$link><img src ='../" . $img . "'><br>" . $info['name'] . "</a>";
+				echo "<td class='center-smaller' style='width:300px; height:150px;'> <a title= \"" .$info['description']. "\" href=$link><img width=\"\" src ='../" . $img . "'><br>" . $info['name'] . "</a>";
 				echo "</td>";
 				$i++;
 				}
