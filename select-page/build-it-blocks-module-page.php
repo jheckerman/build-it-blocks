@@ -21,7 +21,7 @@
 		var descriptionArr = new Array (); ////contains all application descriptions
 		var stepArr = new Array(); //contains all instruction text
 		var animating=false; //boolean to check if animations are true
-		var delay_speed=400; //speed of the delay for text; used in gotoNextStep() and gotoPrevStep()
+		var delay_speed=500; //speed of the delay for text; used in gotoNextStep() and gotoPrevStep()
 		
 
 		<?php
@@ -46,19 +46,31 @@
 		var maxStep=stepArr.length-1;
 		
 		function gotoNextApp(){
-			row++;
-			if(row>maxR) row=0;
-			var newTitle = titleArr[row];
-			var newDescrip = descriptionArr[row];
-			document.getElementById("caption").innerHTML="<h4>" + newTitle + "</h4>"  + newDescrip;
+			if (!animating){
+				animating=true;
+				setTimeout( function() {
+					row++;
+					if(row>maxR) row=0;
+					var newTitle = titleArr[row];
+					var newDescrip = descriptionArr[row];
+					document.getElementById("caption").innerHTML="<h4>" + newTitle + "</h4>"  + newDescrip;
+					animating=false;
+				},delay_speed);
+			}
 		}
 		
 		function gotoPrevApp(){
-			row--;
-			if(row<0) row=maxR;
-			var newTitle = titleArr[row];
-			var newDescrip = descriptionArr[row];
-			document.getElementById("caption").innerHTML="<h4>" + newTitle + "</h4>"  + newDescrip;
+			if (!animating){
+				animating=true;
+				setTimeout( function() {
+					row--;
+					if(row<0) row=maxR;
+					var newTitle = titleArr[row];
+					var newDescrip = descriptionArr[row];
+					document.getElementById("caption").innerHTML="<h4>" + newTitle + "</h4>"  + newDescrip;
+					animating=false;
+				},delay_speed);
+			}
 		}
 		
 		function gotoNextStep(){
