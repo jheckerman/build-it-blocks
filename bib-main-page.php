@@ -30,6 +30,7 @@
 			document.getElementById('legoi').style.display ='none';
 			document.getElementById('arti').style.display ='none';
 			document.getElementById('programmingi').style.display ='none';
+			document.getElementById('minecrafti').style.display ='none';
 			$('#junk').mouseenter(
 				function() {
 					$('#junkc').stop().stop().stop().animate({'top' : '50px'}, 'fast');				
@@ -94,6 +95,26 @@
 					$('#programmingc').animate({	'top'	: '0px' , 'height' : '100px'},'fast');
 				}
 			);
+			
+			
+			$('#minecraft').mouseenter(
+				function () {
+					$('#minecraftc').stop().stop().stop().animate({'top' : '50px'}, 'fast');			
+					$('#minecraftc').slideUp();
+					$('#minecrafti').fadeIn();
+					document.getElementById('minecrafti').style.display='block';
+				}
+			);
+			$('#minecraft').mouseout(
+				function(){
+					document.getElementById('minecrafti').style.display='block';
+					$('#minecrafti').stop().stop().stop().fadeOut();
+					$('#minecraftc').slideDown();
+					$('#minecraftc').animate({	'top'	: '0px' , 'height' : '100px'},'fast');
+				}
+			);
+			
+			
 		});
 	</script>
 </head>
@@ -102,14 +123,14 @@
 	<?php include("biy-header.html");?>
 	<table style="margin:auto; height:400px;" border="0px">
 		<tr>
-			<td onClick="document.location.href='select-page/module-selection-junk.php';" id="junk" style="width:250px; opacity:1; cursor:pointer;cursor:hand">
+			<td onClick="document.location.href='select-page/module-selection-junk.php';" id="junk" style="width:200px; opacity:1; cursor:pointer;cursor:hand">
 				<img id="junki" class="icon" src="menu-icons/menu-junk.jpg">
 				<div id="junkc" class="type-select">
 				<p>
 					<br>Junk</p>
 				</div>
 			</td>
-			<td onClick="document.location.href='select-page/module-selection-lego.php';" id="lego" style="width:250px; opacity:1; cursor:pointer;cursor:hand">
+			<td onClick="document.location.href='select-page/module-selection-lego.php';" id="lego" style="width:200px; opacity:1; cursor:pointer;cursor:hand">
 			<img id="legoi" class="icon" src="menu-icons/menu-lego.jpg">
 				<div id="legoc" class="type-select">
 					<p>
@@ -117,7 +138,7 @@
 					</p>
 				</div>
 			</td>
-			<td onClick="document.location.href='select-page/module-selection-art.php';" id="art" style="width:250px; opacity:1; cursor:pointer;cursor:hand">
+			<td onClick="document.location.href='select-page/module-selection-art.php';" id="art" style="width:200px; opacity:1; cursor:pointer;cursor:hand">
 				<img id="arti" class="icon" src="menu-icons/menu-art.jpg">
 				<div id="artc" class="type-select">
 					<p>
@@ -125,7 +146,7 @@
 					</p>
 				</div>
 			</td>
-			<td onClick="document.location.href='select-page/module-selection-programming.php';" id="programming" style="width:250px; opacity:1; cursor:pointer;cursor:hand">
+			<td onClick="document.location.href='select-page/module-selection-programming.php';" id="programming" style="width:200px; opacity:1; cursor:pointer;cursor:hand">
 				<img id="programmingi" class="icon" src="menu-icons/menu-pragramming.jpg">
 				<div id="programmingc" class="type-select">
 					<p>
@@ -133,6 +154,16 @@
 					</p>
 				</div>
 			</td>
+			
+			<td onClick="document.location.href='select-page/module-selection-minecraft.php';" id="minecraft" style="width:200px; opacity:1; cursor:pointer;cursor:hand">
+				<img id="minecrafti" class="icon" src="menu-icons/menu-minecraft.png" style="height:180px; width:180px;">
+				<div id="minecraftc" class="type-select">
+					<p>
+						<br>Minecraft
+					</p>
+				</div>
+			</td>
+			
 		</tr>
 	</table>
 </body>
