@@ -15,8 +15,8 @@
 		  <ul style="margins:0px;  list-style-type:none; float:left; height:80px; width:800px; padding:0px; text-align:center;">
 		  <div style="width:800px; margin-left:auto; margin-right:auto">
 		  <ul style="margin:0px;  list-style-type:none; float:left; height:80px; width:800px; padding:0px; text-align:center; clear:both">
-			  <li style="float:left; width:250px">
-				  <a href="http://build-it-yourself.com"><img src="images/biy-logo.gif"></a>
+			  <li style="float:left; height:35px">
+				  <a href="http://build-it-yourself.com"><img src="images/biy-logo.gif" style="max-height:100%"></a>
 			  </li>
 			  
 			  <li style="float:left;">
