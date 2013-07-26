@@ -20,8 +20,6 @@
 		var titleArr = new Array(); //contains all application titles
 		var descriptionArr = new Array (); ////contains all application descriptions
 		var stepArr = new Array(); //contains all instruction text
-		var animating=false; //boolean to check if animations are true
-		var delay_speed=500; //speed of the delay for text; used in gotoNextStep() and gotoPrevStep()
 		
 
 		<?php
@@ -42,66 +40,15 @@
 			}
 		?>
 		
-		var maxR=titleArr.length-1;
-		var maxStep=stepArr.length-1;
-		
-		function gotoNextApp(){
-			if (!animating){
-				animating=true;
-				setTimeout( function() {
-					row++;
-					if(row>maxR) row=0;
-					var newTitle = titleArr[row];
-					var newDescrip = descriptionArr[row];
-					document.getElementById("caption").innerHTML="<h4>" + newTitle + "</h4>"  + newDescrip;
-					animating=false;
-				},delay_speed);
-			}
+		function changeApp(number){
+			var newTitle = titleArr[number-1];
+			var newDescrip = descriptionArr[number-1];
+			document.getElementById("caption").innerHTML="<h4>" + newTitle + "</h4>"  + newDescrip;
 		}
 		
-		function gotoPrevApp(){
-			if (!animating){
-				animating=true;
-				setTimeout( function() {
-					row--;
-					if(row<0) row=maxR;
-					var newTitle = titleArr[row];
-					var newDescrip = descriptionArr[row];
-					document.getElementById("caption").innerHTML="<h4>" + newTitle + "</h4>"  + newDescrip;
-					animating=false;
-				},delay_speed);
-			}
-		}
-		
-		function gotoNextStep(){
-			if (!animating){
-				animating=true;
-				setTimeout( function() {
-					step++;
-					if(step>maxStep) step=0;
-					var newStep = stepArr[step];
-					step++;		//step is used as an index for an array. When step = 0, Step 1 should be showing.
-					document.getElementById("caption2").innerHTML="<h4> Step: " + step + "</h4>"  + newStep;
-					step--;
-					animating=false;
-				},delay_speed);
-			}
-		}
-		
-		function gotoPrevStep(){
-		
-			if (!animating){
-				animating=true;
-				setTimeout( function() {
-					step--;
-					if(step<0) step=maxStep;
-					var newStep = stepArr[step];
-					step++;		//step is used as an index for an array. When step = 0, Step 1 should be showing.
-					document.getElementById("caption2").innerHTML="<h4> Step: " + step + "</h4>"  + newStep;
-					step--;
-					animating=false;
-				},delay_speed);
-			}
+		function changeStep(number){
+			var newStep = stepArr[number-1];
+			document.getElementById("caption2").innerHTML="<h4> Step: " + number + "</h4>"  + newStep;
 		}
 													 
 			 
@@ -270,8 +217,8 @@
 							}
 						mysqli_close($con);
 					?>	
-					<a href="#" class="slidesjs-previous slidesjs-navigation" onClick="gotoPrevApp()"><i class="icon-chevron-left icon-large"></i></a>
-					<a href="#" class="slidesjs-next slidesjs-navigation" onClick="gotoNextApp()"><i class="icon-chevron-right icon-large"></i></a>
+					<a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left icon-large"></i></a>
+					<a href="#" class="slidesjs-next slidesjs-navigation""><i class="icon-chevron-right icon-large"></i></a>
 				</div>
 			</div>
 			
@@ -284,7 +231,7 @@
 			
 			<div id="caption">
 				<script>
-						gotoPrevApp(); //row initiated as 1
+						changeApp(1); 
 				</script>
 			</div>
 	  
@@ -308,14 +255,14 @@
 						}
 						mysqli_close($con);
 					?>
-					<a href="#" class="slidesjs-previous slidesjs-navigation" onClick="gotoPrevStep()"><i class="icon-chevron-left icon-large"></i></a>
-					<a href="#" class="slidesjs-next slidesjs-navigation" onClick="gotoNextStep()"><i class="icon-chevron-right icon-large"></i></a>
+					<a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left icon-large"></i></a>
+					<a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right icon-large"></i></a>
 				</div>
 			</div>
 		</div>
 		<div id="caption2">
 			<script>
-				gotoPrevStep();
+				changeStep(1);
 			</script>
 		</div>
 			
@@ -343,7 +290,12 @@
         navigation:false,
         pagination: {
         	active:false
-        }
+        },
+		callback:{
+			complete: function(number){
+				changeApp(number);
+			}
+		}
       });
     });
   </script>
@@ -353,7 +305,12 @@
       $('#slides2').slidesjs({
       	width: 475,
         height: 350,
-        navigation: false
+        navigation: false,
+		callback:{
+			complete: function(number){
+				changeStep(number);
+			}
+		}
       });
     });
   </script>
@@ -367,7 +324,7 @@
   <!-- End SlidesJS Required -->
   
   
-  <div style="clear:both"><?php include("../biy-bottom-info.html"); ?></div>
+  <div style="clear:both"><?php include("../biy-bottom-info.html"); ?></div
 </body>
 </html>
 
