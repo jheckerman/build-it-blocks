@@ -10,54 +10,56 @@
 	</script>
 </head>
 <body>
-	<div style="width:800px; margin-left:auto; margin-right:auto; clear:both;">
-		  <ul style="margins:0px;  list-style-type:none; float:left; height:80px; width:800px; padding:0px; text-align:center;"><div style="width:800px; margin-left:auto; margin-right:auto">
-		  <ul style="margin:0px;  list-style-type:none; float:left; height:80px; width:800px; padding:0px; text-align:center; clear:both">
-			  <li style="float:left; width:250px">
-				  <a href="http://build-it-yourself.com"><img src="images/biy-logo.gif"></a>
-			  </li>
-			  <li style="float:left; width:110px">
-				  <a href="module-selection-junk.php">
-					<div id="junk" class="menu-button" onMouseOver="changeImage(this,'images/button-down.png')" onMouseOut="changeImage(this,'images/button-up.png')">
-						Junk
-					</div>
-				  </a>
-			  </li>
-			  
-			  <li style="float:left; width:110px">
-				  <a href="module-selection-lego.php">
-					<div id="lego" class="menu-button" onMouseOver="changeImage(this,'images/button-down.png')" onMouseOut="changeImage(this,'images/button-up.png')">
-						LEGO
-					</div>
-				  </a>
-			  </li>
-			  
-			  <li style="float:left; width:110px">
-				  <a href="module-selection-art.php">
-					<div id="art" class="menu-button" onMouseOver="changeImage(this,'images/button-down.png')" onMouseOut="changeImage(this,'images/button-up.png')">
-						Art
-					</div>
-				  </a>
-			  </li>
-			  
-			  <li style="float:left; width:110px">
-				  <a href="module-selection-programming.php">
-					<div id="programming" class="menu-button" onMouseOver="changeImage(this,'images/button-down.png')" onMouseOut="changeImage(this,'images/button-up.png')">
-						Programming
-					</div>
-				  </a>
-			  </li> 
-			  
-			  <li style="float:left; width:110px">
-				  <a href="module-selection-minecraft.php">
-					<div id="minecraft" class="menu-button" onMouseOver="changeImage(this,'images/button-down.png')" onMouseOut="changeImage(this,'images/button-up.png')">
-						Minecraft
-					</div>
-				  </a>
-			  </li> 
-		  </ul>
-	  </div>
-	  <div style="height:1px; width:800px; background-color:#404040; margin-left:auto; margin-right:auto; margin-bottom:10px; margin-top:0px; clear:both"> </div>
-	  <span style="clear:none;"> </span>
+	
+		<div style="width:800px; margin-left:auto; margin-right:auto; clear:both;">
+			<ul style="margin:0px;  list-style-type:none; float:left; height:80px; width:800px; padding:0px; text-align:center; clear:both">
+				
+				<li style="float:left; width:250px">
+				<a href="http://build-it-yourself.com"><img src="images/biy-logo.gif"></a>
+			  	</li>
+			 
+			  	<li style="float:left; width:110px">
+				  	<a href="module-selection-junk.php">
+						<div id="junk" class="menu-button" onMouseOver="changeImage(this,'images/button-down.png')" onMouseOut="changeImage(this,'images/button-up.png')">
+							Junk
+						</div>
+				  	</a>
+			  	</li>
+			  	
+			  	<li style="float:left; width:110px">
+				  	<a href="module-selection-lego.php">
+						<div id="lego" class="menu-button" onMouseOver="changeImage(this,'images/button-down.png')" onMouseOut="changeImage(this,'images/button-up.png')">
+							LEGO
+						</div>
+				  	</a>
+			    </li>
+			    
+			  	<li style="float:left; width:110px">
+				  	<a href="module-selection-art.php">
+						<div id="art" class="menu-button" onMouseOver="changeImage(this,'images/button-down.png')" onMouseOut="changeImage(this,'images/button-up.png')">
+							Art
+						</div>
+				 	</a>
+			    </li>
+			    
+			    <li style="float:left; width:110px">
+					<a href="module-selection-programming.php">
+						<div id="programming" class="menu-button" onMouseOver="changeImage(this,'images/button-down.png')" onMouseOut="changeImage(this,'images/button-up.png')">
+							Programming
+						</div>
+				  	</a>
+			    </li> 
+			    
+			  	<li style="float:left; width:110px">
+				  	<a href="module-selection-minecraft.php">
+						<div id="minecraft" class="menu-button" onMouseOver="changeImage(this,'images/button-down.png')" onMouseOut="changeImage(this,'images/button-up.png')">
+							Minecraft
+						</div>
+				  	</a>
+			  	</li>
+			  	
+		  	</ul>
+		
+		<div style="height:1px; width:800px; background-color:#404040; margin-left:auto; margin-right:auto; margin-bottom:10px; margin-top:0px; clear:both"></div>
 </body>
 </html>
