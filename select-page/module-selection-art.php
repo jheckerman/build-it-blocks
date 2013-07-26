@@ -77,7 +77,7 @@
 		function numberofCats(){ //counts the number of categories that type has
 			<?php
 			include("../db-connect.php");
-			$temp = mysqli_query($con, "SELECT * FROM `category_table` WHERE `typeID`= 3"); //typeID =4 for junk
+			$temp = mysqli_query($con, "SELECT * FROM `category_table` WHERE `typeID`= 3"); //typeID =3 for art
 			
 			$counter=0;
 			while($info = mysqli_fetch_array( $temp )){
@@ -103,7 +103,7 @@
 					document.getElementById("content").innerHTML=xmlhttp.responseText;
 				}
 			}
-			xmlhttp.open("GET","../module-selection-modified.php?cat="+ subID +"&type=3",true); //type=4 always for junk
+			xmlhttp.open("GET","../module-selection-modified.php?cat="+ subID +"&type=3",true); //type=3 always for art
 			xmlhttp.send();
 			
 			var categories = numberofCats(); 											//number of categories for this type
@@ -133,7 +133,7 @@
 	<ul type="none" id="menu-jquery" style="margin-left:-25px">
 		<?php
 		include("../db-connect.php");
-		$temp = mysqli_query($con, "SELECT * FROM `category_table` WHERE `typeID`= 3"); //typeID =4 for programming
+		$temp = mysqli_query($con, "SELECT * FROM `category_table` WHERE `typeID`= 3"); //typeID =3 for art
 		$counter=1; //used to label each category selection button as 1,2,3,4 ...
 		while($info = mysqli_fetch_array( $temp )){
 			echo "<li id=\"cat".$counter."\" class=\"button\" style='display:none;' onClick=\"changeCategory(" .$info['subcategoryID']. ",". $counter . ")\">". $info['name'] ."</li>";

@@ -57,7 +57,7 @@
 			  </li> 
 		  </ul>
 	  </div>
-	  <div style="height:1px; width:800px; background-color:#404040; margin-left:auto; margin-right:auto; margin-bottom:-4px; margin-top:0px; clear:both"> </div>
+	  <div style="height:1px; width:800px; background-color:#404040; margin-left:auto; margin-right:auto; margin-bottom:10px; margin-top:0px; clear:both"> </div>
 	  <span style="clear:none;"> </span>
 </body>
 </html>
