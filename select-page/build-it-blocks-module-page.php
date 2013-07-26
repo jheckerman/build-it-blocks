@@ -21,7 +21,7 @@
 		var descriptionArr = new Array (); ////contains all application descriptions
 		var stepArr = new Array(); //contains all instruction text
 		var animating=false; //boolean to check if animations are true
-		var delay_speed=900; //speed of the delay for text; used in gotoNextStep() and gotoPrevStep()
+		var delay_speed=400; //speed of the delay for text; used in gotoNextStep() and gotoPrevStep()
 		
 
 		<?php
@@ -84,9 +84,9 @@
 					step--;
 					if(step<0) step=maxStep;
 					var newStep = stepArr[step];
-					step--;		//step is used as an index for an array. When step = 0, Step 1 should be showing.
+					step++;		//step is used as an index for an array. When step = 0, Step 1 should be showing.
 					document.getElementById("caption2").innerHTML="<h4> Step: " + step + "</h4>"  + newStep;
-					step++;
+					step--;
 					animating=false;
 				},delay_speed);
 			}
