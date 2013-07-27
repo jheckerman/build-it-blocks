@@ -26,7 +26,9 @@ ul.sdt_menu li > a{
 	width:210px;
 	height:85px;
 	z-index:12;
-	background:transparent url(../images/overlay.png) no-repeat bottom right;
+	/* menu item background */
+	/* background:transparent url(../images/overlay.png) no-repeat bottom right; */
+	background-color:#777;
 	-moz-box-shadow:0px 0px 2px #000 inset;
 	-webkit-box-shadow:0px 0px 2px #000 inset;
 	box-shadow:0px 0px 2px #000 inset;
@@ -77,7 +79,7 @@ ul.sdt_menu li span span.sdt_link {
 }
 
 ul.sdt_menu li span span.sdt_link{
-	color:#fff;
+	color:#fff;/*TEXT COLOR*/
 	font-size:24px;
 	float:left;
 	clear:both;
