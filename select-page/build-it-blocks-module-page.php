@@ -111,7 +111,7 @@
       width: 13px;
       height: 0px;
       padding-top: 13px;
-      /*background-image: url(img/pagination.png);*/
+      /*background-image: url(images/pagination.png);*/
       background-position: 0 0;
       float: left;
       position:relative;
@@ -153,18 +153,16 @@
     #slides {
       display: none
     }
-	/*THIS CONTROLS THE WIDTH*/
     .container {
       margin: 0 auto;
-      width:360px;
       float:left;
       
     }
     
     
-    //BIY intern code:
+    /*THESE CONTROL SLIDER WIDTHS*/
     #c1 {
-    	width: 475px;
+    	width:475px;
     }
     #c2 {
     	width:475px;
@@ -283,7 +281,6 @@
 		</div>
 		
 		<div onClick="HideInstr()">
-		
 			<img src="images/overview-button.png" width="160px"/>
 		</div>
 	  
@@ -295,7 +292,7 @@
   <!-- End SlidesJS Required -->
 
   <!-- SlidesJS Required: Link to jquery.slides.js -->
-  <script src="js/jquery.slides.min.js"></script>
+  <script src="jquery.slides.min.js"></script>
   <!-- End SlidesJS Required -->
 
   <!-- SlidesJS REQUIRED FUNCTIONS -->
