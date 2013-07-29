@@ -28,7 +28,7 @@
 	
 	<!--NEW ON 7/26/13-->
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
-        <link rel="stylesheet" href="menu-format.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="menu-stylesheet.css" type="text/css" media="screen"/>
         <style>
 			span.reference{
 				position:fixed;
@@ -47,7 +47,7 @@
 				color:#ddd;
 			}
 			ul.sdt_menu{
-				margin-top:150px;
+				margin-top:65px;
 			}
 		</style>
 	
@@ -124,8 +124,8 @@
 					$elem.find('img')
 						 .stop(true)
 						 .animate({
-							'width':'210px',
-							'height':'210px',
+							'width':'160px',
+							'height':'160px',
 							'left':'0px'
 						 },400,'easeOutBack')
 						 .andSelf()
@@ -138,9 +138,9 @@
 						 .animate({'height':'83px'},300,function(){
 						var $sub_menu = $elem.find('.sdt_box');
 						if($sub_menu.length){
-							var left = '210px';
+							var left = '160px';
 							if($elem.parent().children().length == $elem.index()+1)
-								left = '-210px';
+								left = '-160px';
 							$sub_menu.show().animate({'left':left},200);
 						}	
 					});
