@@ -1,28 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<style>
-		.type-select { 
-			background:#6E6E6E; 
-			margin:auto;
-			width:180px;
-			height:100px; 
-			position:relative;
-			text-align:center;
-			z-index:-1;
-		}
-		.icon {
-			margin-left:auto;
-			margin-right:auto;
-			position:relative;
-			z-index:-2;
-			border: solid black;
-		}
-		p {
-			font-family:"arial",arial, sans-serif;
-			font-size:20pt;
-		}
-	</style>
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	
 	
