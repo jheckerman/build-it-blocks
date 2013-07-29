@@ -28,7 +28,7 @@
 	
 	<!--NEW ON 7/26/13-->
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
-        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+        <link rel="stylesheet" href="menu-format.css" type="text/css" media="screen"/>
         <style>
 			span.reference{
 				position:fixed;
