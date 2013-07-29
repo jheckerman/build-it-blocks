@@ -131,11 +131,13 @@
 						 .andSelf()
 						 .find('.sdt_wrap')
 					     .stop(true)
-						 .animate({'top':'110px'},500,'easeOutBack')
+					     //active text top margin
+						 .animate({'top':'70px'},500,'easeOutBack')
 						 .andSelf()
 						 .find('.sdt_active')
 					     .stop(true)
-						 .animate({'height':'83px'},300,function(){
+					     //active div height
+						 .animate({'height':'50px'},300,function(){
 						var $sub_menu = $elem.find('.sdt_box');
 						if($sub_menu.length){
 							var left = '160px';
@@ -162,7 +164,8 @@
 						 .andSelf()
 						 .find('.sdt_wrap')
 						 .stop(true)
-						 .animate({'top':'25px'},500);
+						 //inactive text margin
+						 .animate({'top':'15px'},500);
 				});
             });
         </script>
