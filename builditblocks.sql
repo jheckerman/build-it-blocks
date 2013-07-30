@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.5.1
+-- version 4.0.4
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jul 26, 2013 at 02:25 PM
--- Server version: 5.5.24-log
--- PHP Version: 5.3.13
+-- Generation Time: Jul 30, 2013 at 09:12 PM
+-- Server version: 5.6.12-log
+-- PHP Version: 5.4.16
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -19,6 +19,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `builditblocks`
 --
+CREATE DATABASE IF NOT EXISTS `builditblocks` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `builditblocks`;
 
 -- --------------------------------------------------------
 
@@ -166,6 +168,7 @@ CREATE TABLE IF NOT EXISTS `module_index` (
   `icon` varchar(100) NOT NULL,
   `icon-alt-text` varchar(50) NOT NULL,
   `download-link` varchar(250) NOT NULL,
+  `download-type` varchar(100) NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9 ;
 
@@ -173,13 +176,13 @@ CREATE TABLE IF NOT EXISTS `module_index` (
 -- Dumping data for table `module_index`
 --
 
-INSERT INTO `module_index` (`ID`, `partnerID`, `name`, `description`, `difficulty`, `date-posted`, `type`, `subcategoryID`, `authorID`, `popularity`, `icon`, `icon-alt-text`, `download-link`) VALUES
-(1, 1, 'Clock Gear Train', 'It''s a clock gear train', 2, '2013-06-03', 2, 1, 1, 0, 'module-images/icons/clock-lego.jpg', '', ''),
-(2, 1, 'NOT Gate', 'The NOT gate, otherwise known as an invertor, changes the output of the gate to the opposite of the input.  For instance, if the input is on, the output is off and vice versa.', 1, '2013-07-15', 5, 1, 5, 0, 'module-images/icons/not-minecraft-100.png', '', ''),
-(5, 1, 'AND Gate', 'The AND gate changes the output of the gate to on when both inputs are on and off when one of the inputs is or when they are both off.', 1, '2013-07-18', 5, 1, 1, 0, 'module-images/icons/and-minecraft-100.png', '', ''),
-(6, 1, 'T-Flip-Flop', 'Changes a pulse into a constant output.  Changes a button into a lever essentially.', 2, '2013-07-18', 5, 1, 5, 0, 'module-images/icons/t-flip-flop-minecraft-100.png', '', ''),
-(7, 1, 'NAND Gate', 'When the two inputs are on the output is off.  Whatever other state the Gate is in the output is on.', 1, '2013-07-18', 5, 1, 5, 0, 'module-images/icons/nand-minecraft-100.png', '', ''),
-(8, 1, 'XOR Gate', 'If one input is on, the output is on.  In any other state the output is off.', 2, '2013-07-18', 5, 1, 5, 0, 'module-images/icons/xor-minecraft-100.png', '', '');
+INSERT INTO `module_index` (`ID`, `partnerID`, `name`, `description`, `difficulty`, `date-posted`, `type`, `subcategoryID`, `authorID`, `popularity`, `icon`, `icon-alt-text`, `download-link`, `download-type`) VALUES
+(1, 1, 'Clock Gear Train', 'It''s a clock gear train', 2, '2013-06-03', 2, 1, 1, 0, 'module-images/icons/clock-lego.jpg', '', 'http://www.invention-universe.com/val/', 'Val''s website'),
+(2, 1, 'NOT Gate', 'The NOT gate, otherwise known as an invertor, changes the output of the gate to the opposite of the input.  For instance, if the input is on, the output is off and vice versa.', 1, '2013-07-15', 5, 1, 5, 0, 'module-images/icons/not-minecraft-100.png', '', 'http://www.invention-universe.com/val/', 'Val''s website'),
+(5, 1, 'AND Gate', 'The AND gate changes the output of the gate to on when both inputs are on and off when one of the inputs is or when they are both off.', 1, '2013-07-18', 5, 1, 1, 0, 'module-images/icons/and-minecraft-100.png', '', 'http://www.invention-universe.com/val/', 'Val''s website'),
+(6, 1, 'T-Flip-Flop', 'Changes a pulse into a constant output.  Changes a button into a lever essentially.', 2, '2013-07-18', 5, 1, 5, 0, 'module-images/icons/t-flip-flop-minecraft-100.png', '', '', ''),
+(7, 1, 'NAND Gate', 'When the two inputs are on the output is off.  Whatever other state the Gate is in the output is on.', 1, '2013-07-18', 5, 1, 5, 0, 'module-images/icons/nand-minecraft-100.png', '', '', ''),
+(8, 1, 'XOR Gate', 'If one input is on, the output is on.  In any other state the output is off.', 2, '2013-07-18', 5, 1, 5, 0, 'module-images/icons/xor-minecraft-100.png', '', '', '');
 
 -- --------------------------------------------------------
 

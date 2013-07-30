@@ -250,20 +250,20 @@
 			</script>
 		</div>
 			
-		<div> <!-- ::::::::::::::: -->
-			<?php
-				include("../db-connect.php");
-				$module_number = $_GET["id"];
-				$temp = mysqli_query($con, "SELECT * FROM `module_index` WHERE `ID`=" . $module); //get the rows
-				$module = mysqli_fetch_array($temp);				
-				$module_download_address = $module ['download-link'];
-				$module_download_type = $module ['download-type'];
-				//echo $module_download_type . " | " . $module_download_address; 
-				if($module_download_type!= ""){
-					echo "<a href=\" ".$module_download_address."\">Download the ".$module_download_type."</a>";
-				}
-			?>
-		</div>
+		<div> <!--This div is covered up by SOMETHING and is invisible :(((( -->
+<?php
+include("../db-connect.php");
+$module_number = $_GET["id"];
+$temp = mysqli_query($con, "SELECT * FROM `module_index` WHERE `ID`=" . $module_number); //get the rows
+$module = mysqli_fetch_array($temp);
+$module_download_address = $module ['download-link'];
+$module_download_type = $module ['download-type'];
+//echo $module_download_type . " | " . $module_download_address; 
+if($module_download_type!= ""){
+echo "<a href=\" ".$module_download_address."\">Download the ".$module_download_type."</a>";
+}
+?>
+</div>
 		<div onClick="HideInstr()">
 			<img src="images/overview-button.png" width="160px"/>
 		</div>
