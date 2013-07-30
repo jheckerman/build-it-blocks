@@ -1,9 +1,14 @@
+/* This CSS file styles the category menu (Junk, Lego...) on the Build-It-Blocks main page. * /
+/* The source for the orignal Slide Down Box Menu can be found here:  */
+
+
 ul.sdt_menu{
 	margin:auto;
 	padding:0;
 	list-style: none;
-	font-family:"Myriad Pro", "Trebuchet MS", sans-serif;
+	font-family:verdana;
 	font-size:14px;
+	/* width of entire menu */
 	width:800px;
 }
 ul.sdt_menu a{
@@ -12,7 +17,7 @@ ul.sdt_menu a{
 }
 ul.sdt_menu li{
 	float:left;
-	/*object width and height (invisible)*/
+	/* menu item object width and height (invisible) */
 	width:160px;
 	height:55px;
 	position:relative;
@@ -22,7 +27,7 @@ ul.sdt_menu li > a{
 	position:absolute;
 	top:0px;
 	left:0px;
-	/*actual block width and height (visible)*/
+	/* menu item actual block width and height (visible) */
 	width:160px;
 	height:55px;
 	z-index:12;
@@ -47,11 +52,11 @@ ul.sdt_menu li a img{
 }
 ul.sdt_menu li span.sdt_wrap{
 	position:absolute;
-	/*NON-ACTIVE TEXT TOP MARGIN*/
+	/* NON-ACTIVE TEXT TOP MARGIN */
 	top:15px;
 	/*left:0px;*/
 	margin-left:0px;
-	/*TEXT ALIGNMENT DIV*/
+	/* TEXT ALIGNMENT DIV */
 	width:160px;
 	height:60px;
 	z-index:15;
@@ -60,7 +65,7 @@ ul.sdt_menu li span.sdt_active{
 	position:absolute;
 	background:#111;
 	top:55px;
-	/*WIDTH OF OPENED TAB*/
+	/* WIDTH OF OPENED TAB */
 	width:160px;
 	height:0px;
 	left:0px;
@@ -82,7 +87,7 @@ ul.sdt_menu li span span.sdt_link {
 }
 
 ul.sdt_menu li span span.sdt_link{
-	color:#fff;/*TEXT COLOR AND SIZE*/
+	color:#fff;/* TEXT COLOR AND SIZE */
 	font-size:18px;
 	float:left;
 	clear:both;
@@ -91,7 +96,7 @@ ul.sdt_menu li span span.sdt_descr{
 	color:#0B75AF;
 	float:left;
 	clear:both;
-	width:155px; /*For dumbass IE7*/
+	width:155px; /* For dumbass IE7 */
 	font-size:10px;
 	letter-spacing:1px;
 }
@@ -117,4 +122,24 @@ ul.sdt_menu li div.sdt_box a:first-child{
 }
 ul.sdt_menu li div.sdt_box a:hover{
 	color:#fff;
+}
+
+span.reference{
+	position:fixed;
+	left:10px;
+	bottom:10px;
+	font-size:12px;
+}
+span.reference a{
+	color:#aaa;
+	text-transform:uppercase;
+	text-decoration:none;
+	text-shadow:1px 1px 1px #000;
+	margin-right:30px;
+}
+span.reference a:hover{
+	color:#ddd;
+}
+ul.sdt_menu{
+	margin-top:65px;
 }
