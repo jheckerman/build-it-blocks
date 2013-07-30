@@ -250,7 +250,7 @@
 			</script>
 		</div>
 			
-		<div> <!--This div is covered up by SOMETHING and is invisible :(((( -->
+		<div> <!-- ::::::::::::::: -->
 			<?php
 				include("../db-connect.php");
 				$module_number = $_GET["id"];
@@ -260,7 +260,7 @@
 				$module_download_type = $module ['download-type'];
 				//echo $module_download_type . " | " . $module_download_address; 
 				if($module_download_type!= ""){
-					echo "<a href=\" ".$module_download_address.">Download the ".$module_download_type."</a>";
+					echo "<a href=\" ".$module_download_address."\">Download the ".$module_download_type."</a>";
 				}
 			?>
 		</div>
