@@ -96,11 +96,13 @@
 			margin: 0 1px;
 		}
 
+		/* this selector formats the page numbers for the slider */
 		.slidesjs-pagination li a {
 			display: block;
 			width: 13px;
 			height: 0px;
 			padding-top: 13px;
+			/*IF YOU WANT TO SHOW WHAT PAGE THE USER IS ON, SHOW THE IMAGE BELOW VVV */
 			/*background-image: url(images/pagination.png);*/
 			background-position: 0 0;
 			float: left;
@@ -112,7 +114,7 @@
 			font-weight: 600;
 			line-height: 20px;
 			color: #404040;
-			background-color: #ffffff
+			background-color: transparent;
 		}
 
 		.slidesjs-pagination li a.active,
@@ -279,7 +281,7 @@ echo "<a href=\" ".$module_download_address."\">Download the ".$module_download_
 		$(function() {
 			$('#slides').slidesjs({
 				width: 475,
-				height: 350,
+				height: 370,
 				navigation:false,
 				pagination: {
 					active:false
