@@ -3,14 +3,11 @@
 	<LINK href="../biy-stylesheet.css" rel="stylesheet" type="text/css">
 	<meta charset="utf-8">
 	<title>Module</title>
-	<!-- SlidesJS Required (if responsive): Sets the page width to the device width. -->
-	<meta name="viewport" content="width=device-width">
-	<!-- End SlidesJS Required -->
 	
-	<!-- CSS for slidesjs.com example -->
-	<link rel="stylesheet" href="css/example.css">
+	<!-- CSS for slidesjs slider -->
+	<link rel="stylesheet" href="css/slidesjs.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<!-- End CSS for slidesjs.com example -->
+	<!-- End CSS for slidesjs slider -->
 
 	<script type="text/javascript">
 		var row=1; //variable that tracks which application you are on
@@ -158,7 +155,7 @@
     }
     
     #caption2 {
-    	height:330px;
+    	height:315px;
     }
     
     
@@ -252,7 +249,7 @@
 			</script>
 		</div>
 			
-		<div> <!--This div is covered up by SOMETHING and is invisible :(((( -->
+		<div>
 <?php
 include("../db-connect.php");
 $module_number = $_GET["id"];
@@ -262,7 +259,7 @@ $module_download_address = $module ['download-link'];
 $module_download_type = $module ['download-type'];
 //echo $module_download_type . " | " . $module_download_address; 
 if($module_download_type!= ""){
-echo "<a href=\" ".$module_download_address."\">Download the ".$module_download_type."</a>";
+echo "<a href=\" ".$module_download_address."\">Download ".$module_download_type."</a>";
 }
 ?>
 </div>
@@ -281,7 +278,7 @@ echo "<a href=\" ".$module_download_address."\">Download the ".$module_download_
 		$(function() {
 			$('#slides').slidesjs({
 				width: 475,
-				height: 370,
+				height: 350,
 				navigation:false,
 				pagination: {
 					active:false
