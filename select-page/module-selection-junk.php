@@ -43,7 +43,7 @@
 		<script type="text/javascript">
 			
 			$(document).ready(function() {
-				
+				$("#menu-jquery li").show(300, function(){
 				$('#menu-jquery li').hover(
 				
 					function() {
@@ -70,6 +70,7 @@
 								 			'fast');
 				
 				})		
+				});
 			});
 		</script>
 		
