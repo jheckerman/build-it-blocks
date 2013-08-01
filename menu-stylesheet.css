@@ -140,6 +140,8 @@ span.reference a{
 span.reference a:hover{
 	color:#ddd;
 }
+
 ul.sdt_menu{
-	margin-top:65px;
+	/* top margin for the entire menu.  This exist to make space for the square images that pop up. */
+	margin-top:80px;
 }

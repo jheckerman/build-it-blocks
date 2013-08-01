@@ -24,9 +24,6 @@
 			span.reference a:hover{
 				color:#ddd;
 			}
-			ul.sdt_menu{
-				margin-top:65px;
-			}
 		</style>
 	
 </head>
@@ -68,7 +65,7 @@
 						<img src="menu-icons/menu-programming.jpg" alt=""/>
 						<span class="sdt_active"></span>
 						<span class="sdt_wrap">
-							<span class="sdt_link"><div style="text-align:center">Programming</div></span>
+							<span class="sdt_link"><div style="text-align:center">Code</div></span>
 						</span>
 					</a>
 				</li>

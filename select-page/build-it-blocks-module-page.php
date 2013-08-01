@@ -230,7 +230,7 @@
 						$module = $_GET["id"];
 						$temp = mysqli_query($con, "SELECT * FROM `steps` WHERE `moduleID`=" . $module); //get the rows
 						while($array = mysqli_fetch_array($temp)){
-							echo "<div id=\"instructions-slider\" style=\"border:solid 1px; width:800px\">";
+							echo "<div id=\"instructions-slider\" style=\"width:800px\">";
 								echo "
 									\n<div class=\"img_wrapper\" style=\"height:100%\">
 										<img src=\"../" .$array['image-path'] ."\" alt=\"\" style=\"max-height:100%\">
