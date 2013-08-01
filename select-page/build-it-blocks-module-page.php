@@ -7,6 +7,7 @@
 	<!-- CSS for slidesjs slider -->
 	<link rel="stylesheet" href="css/slidesjs.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/module-stylesheet.css">
 	<!-- End CSS for slidesjs slider -->
 
 	<script type="text/javascript">
@@ -57,111 +58,12 @@
 		});
 		}
 	</script>
-	<!--SlidesJS stuff vvv -->
-	<style>
-		#slides,
-		#slides2,
-		#slides3 {
-			display: none;
-			margin-bottom:50px;
-		}
-
-		.slidesjs-navigation {
-			margin-top:3px;
-		}
-
-		.slidesjs-previous {
-			margin-right: 5px;
-			float: left;
-			color: #000000
-		}
-
-		.slidesjs-next {
-			margin-right: 5px;
-			float: left;
-			color: #00ff00
-		}
-
-		.slidesjs-pagination {
-			margin: 6px 0 0;
-			float: right;
-			list-style: none;
-		}
-
-		.slidesjs-pagination li {
-			float: left;
-			margin: 0 1px;
-		}
-
-		/* this selector formats the page numbers for the slider */
-		.slidesjs-pagination li a {
-			display: block;
-			width: 13px;
-			height: 0px;
-			padding-top: 13px;
-			/*IF YOU WANT TO SHOW WHAT PAGE THE USER IS ON, SHOW THE IMAGE BELOW VVV */
-			/*background-image: url(images/pagination.png);*/
-			background-position: 0 0;
-			float: left;
-			position:relative;
-			top:-20px;
-			/*overflow: hidden;*/
-			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-			font-size: 14px;
-			font-weight: 600;
-			line-height: 20px;
-			color: #404040;
-			background-color: transparent;
-		}
-
-		.slidesjs-pagination li a.active,
-		.slidesjs-pagination li a:hover.active {
-			background-position: 0 -13px
-		}
-
-		/* PAGE NUMBER COLOR CHANGE*/
-		.slidesjs-pagination li a:hover {
-			background-position: 0 -26px;
-			color: #ff4040;
-		}
-
-		a:link,
-		a:visited {
-			color: #404040 /*333*/
-		}
-
-		a:hover > i {
-			color: #ff4040
-		}
-
-	   .navbar {
-			overflow: hidden
-		}
-    #slides {
-		display: none
-    }
-    .container {
-		margin: 0 auto;
-		float:left;
-    }
-    
-    
-    /*THESE CONTROL SLIDER WIDTHS*/
-    #c1 {
-    	width:475px;
-    }
-    #c2 {
-    	width:475px;
-    }
-    
-    #caption2 {
-    	height:315px;
-    }
-    
-    
-	</style>
+	
 </head>
 <body>
+	
+	
+	
 	<?php include("../bib-header-menu.php"); ?>
 	<div>
 		<?php
@@ -182,6 +84,8 @@
 		<div style="height:1px; width:800px; background-color:#404040; margin-bottom:-4px;"> </div>
 		<br/>
 	</div>
+	
+	
 	
 	<div id="overview">
 		<div style="width:800px;">
@@ -220,6 +124,8 @@
 		</div>      	
 	</div>
 	
+	
+	
 	<div id="instr">
 		<div style="width:800px;">
 			<div class="container" id="c2">
@@ -250,23 +156,25 @@
 		</div>
 			
 		<div>
-<?php
-include("../db-connect.php");
-$module_number = $_GET["id"];
-$temp = mysqli_query($con, "SELECT * FROM `module_index` WHERE `ID`=" . $module_number); //get the rows
-$module = mysqli_fetch_array($temp);
-$module_download_address = $module ['download-link'];
-$module_download_type = $module ['download-type'];
-//echo $module_download_type . " | " . $module_download_address; 
-if($module_download_type!= ""){
-echo "<a href=\" ".$module_download_address."\">Download ".$module_download_type."</a>";
-}
-?>
-</div>
+			<?php
+			include("../db-connect.php");
+			$module_number = $_GET["id"];
+			$temp = mysqli_query($con, "SELECT * FROM `module_index` WHERE `ID`=" . $module_number); //get the rows
+			$module = mysqli_fetch_array($temp);
+			$module_download_address = $module ['download-link'];
+			$module_download_type = $module ['download-type'];
+			if($module_download_type!= ""){
+				echo "<a href=\" ".$module_download_address."\">Download ".$module_download_type."</a>";
+			}
+			?>
+		</div>
 		<div onClick="HideInstr()">
 			<img src="images/overview-button.png" width="160px"/>
 		</div>
 	</div>
+	
+	
+	
 	<!-- SlidesJS Required: Link to jQuery -->
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<!-- End SlidesJS Required -->
