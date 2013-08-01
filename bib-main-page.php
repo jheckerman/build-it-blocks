@@ -79,8 +79,16 @@
 					</a>
 				</li>
 			</ul>
-	
-	
+			<br>
+			<div style="margin:auto; width:800px; margin-top:100px;">
+				<div style="float:left; box-shadow:0px 0px 4px #000; text-shadow:1px 1px 1px #000; background-color:grey; width:350px; height:50px;">
+					Module of the Week
+				</div>
+				
+				<div style="float:right; box-shadow:0px 0px 4px #000; text-shadow:1px 1px 1px #000; background-color:grey; width:350px; height:50px;">
+					Missions
+				</div>
+			</div>
 	
 	<!-- The JavaScript -->
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
