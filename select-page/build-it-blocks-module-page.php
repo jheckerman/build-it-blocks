@@ -185,9 +185,9 @@
 	</div>
 	
 	<div id="overview">
-		<div style="width:800px; border:solid red 1px">
+		<div style="width:800px;">
 			<div class="container" id="c1">
-				<div id="slides" style="border:solid 1px;" >
+				<div id="slides">
 					<?php
 						include("../db-connect.php");
 						$module = $_GET["id"];
@@ -222,9 +222,9 @@
 	</div>
 	
 	<div id="instr">
-		<div style="width:800px; border:solid red 1px">
+		<div style="width:800px;">
 			<div class="container" id="c2">
-				<div id="slides2" style="border:solid 1px">
+				<div id="slides2">
 					<?php
 						include("../db-connect.php");
 						$module = $_GET["id"];

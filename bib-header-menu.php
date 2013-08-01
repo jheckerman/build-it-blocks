@@ -84,7 +84,7 @@
 					</li>
 				</ul>
 			</div> <!-- see, we do not close the div and the ul and I hate it, but it works when it's written wrong. It, on the other hand, refuses to work when written correctly. Makes me a bit sad, but I almost got over it. -->
-			<div style="height:1px; width:800px; background-color:#FF4040; margin-left:auto; margin-right:auto; margin-bottom:10px; margin-top:1px; clear:both">
+			<div style="height:1px; width:800px; background-color:#404040; margin-left:auto; margin-right:auto; margin-bottom:12px; margin-top:1px; clear:both; position:relative;">
 	  	</div>
 		<!-- it turns out that without putting clear:none somewhere, we cannot center without using the clear:both modifier. -->
 		<!-- That's why we put it in an empty span. And from here on, we can center the divs, spans, uls and tables that come next. -->
