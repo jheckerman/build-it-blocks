@@ -148,6 +148,7 @@
 
 <script> 
 	$("#menu-jquery li").show(300); //some animation to display categories
+	changeCategory(0,0); //view all is selected by default
 </script>
 
 	<div style="height:1px; width:800px; background-color:#404040; margin-left:auto; margin-right:auto; margin-top:-72px;"></div>
