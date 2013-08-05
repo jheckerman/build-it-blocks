@@ -5,7 +5,7 @@
 </head>
 
 <body>
-	<table style="margin:auto;" border="0">
+	<table class="category-table">
 		<?php
 			include("db-connect.php");
 			$cat = $_GET["cat"];

@@ -6,26 +6,8 @@
 	
 	<!--NEW ON 7/26/13-->
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
-        <link rel="stylesheet" href="menu-stylesheet.css" type="text/css" media="screen"/>
-        <style>
-			span.reference{
-				position:fixed;
-				left:10px;
-				bottom:10px;
-				font-size:12px;
-			}
-			span.reference a{
-				color:#aaa;
-				text-transform:uppercase;
-				text-decoration:none;
-				text-shadow:1px 1px 1px #000;
-				margin-right:30px;
-			}
-			span.reference a:hover{
-				color:#ddd;
-			}
-		</style>
-	
+    <link rel="stylesheet" href="menu-stylesheet.css" type="text/css" media="screen"/>
+	<!--I put the CSS in the stylesheet. You're welcome. :)-->
 </head>
 
 <body>
