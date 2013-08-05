@@ -20,14 +20,14 @@
 			$col=4; //number of columns
 			while($info = mysqli_fetch_array( $data )){
 				if($i% $col==0){ //new row if this is the 4th column
-					echo "<tr style=\"height:200px;\">";
+					echo "<tr class=\"selection-row\">";
 				}
 				//note: on module page, the id variable will be used to pull data from the appropriate tables
 				$link="build-it-blocks-module-page.php?id=" . $info['ID'];
 				$temp = mysqli_query($con, "SELECT `icon` FROM `module_index` WHERE `id`=". $info['ID']); 
 				$fetch = mysqli_fetch_array($temp); //fetches the data and puts it into an array
 				$img = $fetch['icon'];
-				echo "<td class='center-smaller' style='width:300px; height:150px;'> <a title= \"" .$info['description']. "\" href=$link><img width=\"150px\" src ='../" . $img . "'><br>" . $info['name'] . "</a>";
+				echo "<td class='center-smaller'> <a title= \"" .$info['description']. "\" href=$link><img width=\"150px\" src ='../" . $img . "'><br>" . $info['name'] . "</a>";
 				echo "</td>";
 				$i++;
 				}

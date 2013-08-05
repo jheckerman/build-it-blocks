@@ -4,120 +4,86 @@
 	<head>
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<LINK href="../biy-stylesheet.css" rel="stylesheet" type="text/css">
-	<style>
-	
-	.button{
-	
-	background-color:white; 
-	float:left;
-	color:#404040;
-	text-align:center;
-	margin-left:10px;
-	margin-right:auto;
-	width:110px;
-	height:25px;
-	padding-top:3px;
-	font-family:"verdana", verdana, sans-serif;
-	
-	}
-	
-	.button-clicked{
-
-	float:left;
-	text-align:center;
-	margin-left:10px;
-	margin-right:auto;
-	width:110px;
-	height:25px;
-	color:#EB0000;
-	padding-top:3px;
-	font-family:"verdana", verdana, sans-serif;
-	
-	}
-
-	
-	</style>
-
-		<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
-		<script type="text/javascript" src="jquery.color.js"></script>
-		<script type="text/javascript">
+	<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+	<script type="text/javascript" src="jquery.color.js"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function() {
+			$("#menu-jquery li").show(300, function(){
+			$('#menu-jquery li').hover(
 			
-			$(document).ready(function() {
-				$("#menu-jquery li").show(300, function(){
-				$('#menu-jquery li').hover(
-				
-					function() {
-						
-						$(this).css('padding', '3px 0px 0px 0px')
-						.stop()
-								 .animate({	 'paddingLeft'	: '0px', 
-											 'paddingRight'	: '0px',
-											 'paddingTop': '3px',
-											 //'color':'#4040ff',
-											 'backgroundColor':'#F2F2F2'}, 
-											 'fast');
-					}, 
+				function() {
 					
-					function() {
-						
-						$(this).css('padding', '3px 0px 0px 0px')
-						.stop()
-								 .animate({'paddingLeft'	: '0px', 
-								 			'paddingRight'	: '0px',
-											'paddingTop' : '3px',	
-											//'color':'#404040',										
-								 			'backgroundColor' :'#FFFFFF'}, 
-								 			'fast');
+					$(this).css('padding', '3px 0px 0px 0px')
+					.stop()
+							 .animate({	 'paddingLeft'	: '0px', 
+										 'paddingRight'	: '0px',
+										 'paddingTop': '3px',
+										 //'color':'#4040ff',
+										 'backgroundColor':'#F2F2F2'}, 
+										 'fast');
+				}, 
 				
-				})
-				});	
-			});
-		</script>
-		
-		<script language="javascript">
-		function numberofCats(){ //counts the number of categories that type has
-			<?php
-			include("../db-connect.php");
-			$temp = mysqli_query($con, "SELECT * FROM `category_table` WHERE `typeID`= 1"); //typeID =1 lego, same cats as junk
+				function() {
+					
+					$(this).css('padding', '3px 0px 0px 0px')
+					.stop()
+							 .animate({'paddingLeft'	: '0px', 
+										'paddingRight'	: '0px',
+										'paddingTop' : '3px',	
+										//'color':'#404040',										
+										'backgroundColor' :'#FFFFFF'}, 
+										'fast');
 			
-			$counter=0;
-			while($info = mysqli_fetch_array( $temp )){
-				$counter++;
-			}
-			echo "var cats =" .$counter. ";"; 
-			?>
-			return cats;
+			})
+			});	
+		});
+	</script>
+	
+	<script language="javascript">
+	function numberofCats(){ //counts the number of categories that type has
+		<?php
+		include("../db-connect.php");
+		$temp = mysqli_query($con, "SELECT * FROM `category_table` WHERE `typeID`= 1"); //typeID =1 lego, same cats as junk
 		
+		$counter=0;
+		while($info = mysqli_fetch_array( $temp )){
+			$counter++;
 		}
-		function changeCategory(subID,count)
-		{	
-			var position=(count *120) - 85;
-			document.getElementById("redline").style.left= position +"px";
-			document.getElementById("redline").style.display= "none";
-			var xmlhttp;
+		echo "var cats =" .$counter. ";"; 
+		?>
+		return cats;
+	
+	}
+	function changeCategory(subID,count)
+	{	
+		var position=(count *120) - 85;
+		document.getElementById("redline").style.left= position +"px";
+		document.getElementById("redline").style.display= "none";
+		var xmlhttp;
 
-			xmlhttp=new XMLHttpRequest();
-			xmlhttp.onreadystatechange=function()
+		xmlhttp=new XMLHttpRequest();
+		xmlhttp.onreadystatechange=function()
+		{
+			if (xmlhttp.readyState==4 && xmlhttp.status==200)
 			{
-				if (xmlhttp.readyState==4 && xmlhttp.status==200)
-				{
-					document.getElementById("content").innerHTML=xmlhttp.responseText;
-				}
+				document.getElementById("content").innerHTML=xmlhttp.responseText;
 			}
-			xmlhttp.open("GET","../module-selection-modified.php?cat="+ subID +"&type=2",true); //type=2 always for lego
-			xmlhttp.send();
-			
-			var categories = numberofCats(); 											//number of categories for this type
-			while(categories >= 0){
-				document.getElementById("cat" + categories).className="button";
-				categories--;
-			}
-			
-			document.getElementById("cat" + count).className="button-clicked";
+		}
+		xmlhttp.open("GET","../module-selection-modified.php?cat="+ subID +"&type=2",true); //type=2 always for lego
+		xmlhttp.send();
+		
+		var categories = numberofCats(); 											//number of categories for this type
+		while(categories >= 0){
+			document.getElementById("cat" + categories).className="button";
+			categories--;
 		}
 		
- 
-		</script>
+		document.getElementById("cat" + count).className="button-clicked";
+	}
+	
+
+	</script>
 </head>
 <body>
 <?php include("../bib-header-menu.php"); ?>
