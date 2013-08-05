@@ -20,7 +20,7 @@
 						<img src="menu-icons/menu-junk.jpg" alt=""/>
 						<span class="sdt_active"></span>
 						<span class="sdt_wrap">
-							<span class="sdt_link"><div style="text-align:center">Junk</div></span>
+							<span class="sdt_link"><div class="menu-text">Junk</div></span>
 						</span>
 					</a>
 				</li>
@@ -29,7 +29,7 @@
 						<img src="menu-icons/menu-lego.jpg" alt=""/>
 						<span class="sdt_active"></span>
 						<span class="sdt_wrap">
-							<span class="sdt_link"><div style="text-align:center">Lego</div></span>
+							<span class="sdt_link"><div class="menu-text">Lego</div></span>
 						</span>
 					</a>
 				</li>
@@ -38,7 +38,7 @@
 						<img src="menu-icons/menu-art.jpg" alt=""/>
 						<span class="sdt_active"></span>
 						<span class="sdt_wrap">
-							<span class="sdt_link"><div style="text-align:center">Art</div></span>
+							<span class="sdt_link"><div class="menu-text">Art</div></span>
 						</span>
 					</a>
 				</li>
@@ -47,7 +47,7 @@
 						<img src="menu-icons/menu-programming.jpg" alt=""/>
 						<span class="sdt_active"></span>
 						<span class="sdt_wrap">
-							<span class="sdt_link"><div style="text-align:center">Code</div></span>
+							<span class="sdt_link"><div class="menu-text">Code</div></span>
 						</span>
 					</a>
 				</li>
@@ -56,18 +56,18 @@
 						<img src="menu-icons/menu-minecraft.jpg" alt=""/>
 						<span class="sdt_active"></span>
 						<span class="sdt_wrap">
-							<span class="sdt_link"><div style="text-align:center">Minecraft</div></span>
+							<span class="sdt_link"><div class="menu-text">Minecraft</div></span>
 						</span>
 					</a>
 				</li>
 			</ul>
 			<br>
-			<div style="margin:auto; width:800px; margin-top:100px;">
-				<div style="float:left; box-shadow:0px 0px 4px #000; text-shadow:1px 1px 1px #000; background-color:grey; width:350px; height:50px;">
+			<div id="main-page-week-module-missions-container">
+				<div id="module-of-the-week">
 					Module of the Week
 				</div>
 				
-				<div style="float:right; box-shadow:0px 0px 4px #000; text-shadow:1px 1px 1px #000; background-color:grey; width:350px; height:50px;">
+				<div id="missions">
 					Missions
 				</div>
 			</div>
