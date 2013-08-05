@@ -15,7 +15,7 @@
 		<ul style="margins:0px;  list-style-type:none; float:left; height:50px; width:800px; padding:0px; text-align:center;">
 		<!-- for some unknown reason the next two lines were added automatically by Github sync tool, and even though the div and the ul are not closed anywhere, -->
 		<!-- it does HTML magic and doesn't want to center without them. -->
-		<!-- I guess HTML is like that from time to time. And life is so. -->
+		<!-- I guess HTML is tough for no reason from time to time. And life is so. -->
 			<div style="width:800px; margin-left:auto; margin-right:auto">
 				<ul style="margin:0px;  list-style-type:none; float:left; height:50px; width:800px; padding:0px; text-align:center; clear:both"> <!--list-type-style:none get rid of the bullets in the list -->
 					<li style="float:left; height:35px"> <!-- I'm not really sure 35px is the right size, we need to do some calculation to make the BIY logo align with the buttons. -->
