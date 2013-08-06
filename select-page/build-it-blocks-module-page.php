@@ -155,7 +155,7 @@
 			</script>
 		</div>
 			
-		<div>
+		<div class="centered-div">
 			<?php
 			include("../db-connect.php");
 			$module_number = $_GET["id"];
@@ -168,7 +168,7 @@
 			}
 			?>
 		</div>
-		<div onClick="HideInstr()">
+		<div class="centered-div" onClick="HideInstr()">
 			<img src="images/overview-button.png" width="160px"/>
 		</div>
 	</div>

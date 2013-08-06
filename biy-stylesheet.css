@@ -176,24 +176,44 @@ a:hover
 }
 
 .img_wrapper{
+	width:100%;
 	height:100%;
+	margin:auto;
+	/*border: solid orange 1px;*/
 }
 
 .wrapped_picture{
 	max-height:100%;
+	margin:auto;
 }
 
 #build-it-button{
 	display:inline-block;
+	width:325px;
+	float:right;
+	/*margin:auto;*/
+	text-align:center;
 }
 
 #build-button{
 	width:300px;
-	margin:auto;
+	/*margin:auto;*/
+	float:right;
+	text-align:center;
 }
 
 #build-image{
 	width:100%;
+}
+
+#caption{
+	margin:auto;
+	text-align:center;
+}
+
+.centered-div{
+	text-align:center;
+	margin:auto;
 }
 
 .instructions-slider{

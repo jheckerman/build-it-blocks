@@ -3,7 +3,8 @@
 		#slides2,
 		#slides3 {
 			display: none;
-			margin-bottom:50px;
+			margin:auto auto 50px;
+			/*border: solid black 1px;*/
 		}
 
 		.slidesjs-navigation {
@@ -96,6 +97,8 @@
     
     #caption2 {
     	height:315px;
+		text-align:center;
+		margin:auto;
     }
     
     
