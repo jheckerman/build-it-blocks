@@ -330,3 +330,23 @@ a:hover
 .charlotte{ /*my personal favourite! :)*/
 	height:750px;
 }
+
+#bottom-gray-line{
+	height:1px;
+	width:800px;
+	background-color:#404040;
+	margin:0 auto;
+}
+
+#bottom-text{
+	font-family: verdana, sans-serif;
+	font-size: .85em;
+	font-weight: normal;
+	color: #404040;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+} 				
+
+#bottom-email{
+	color:#101010;
+}

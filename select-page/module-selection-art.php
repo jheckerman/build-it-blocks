@@ -1,19 +1,16 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-	<head>
+<head>
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<LINK href="../biy-stylesheet.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
 	<script type="text/javascript" src="jquery.color.js"></script>
-	<script type="text/javascript">
-		
+	<script type="text/javascript">		
 		$(document).ready(function() {
 			$("#menu-jquery li").show(300, function(){
-			$('#menu-jquery li').hover(
-			
-				function() {
-					
+			$('#menu-jquery li').hover(			
+				function() {					
 					$(this).css('padding', '3px 0px 0px 0px')
 					.stop()
 							 .animate({	 'paddingLeft'	: '0px', 
@@ -23,9 +20,7 @@
 										 'backgroundColor':'#F2F2F2'}, 
 										 'fast');
 				}, 
-				
-				function() {
-					
+				function() {					
 					$(this).css('padding', '3px 0px 0px 0px')
 					.stop()
 							 .animate({'paddingLeft'	: '0px', 
@@ -33,27 +28,23 @@
 										'paddingTop' : '3px',	
 										//'color':'#404040',										
 										'backgroundColor' :'#FFFFFF'}, 
-										'fast');
-			
-			})	
+										'fast');			
+				})	
 			});	
 		});
-	</script>
-	
+	</script>	
 	<script language="javascript">
 	function numberofCats(){ //counts the number of categories that type has
 		<?php
 		include("../db-connect.php");
 		$temp = mysqli_query($con, "SELECT * FROM `category_table` WHERE `typeID`= 3"); //typeID =3 for art
-		
 		$counter=0;
 		while($info = mysqli_fetch_array( $temp )){
 			$counter++;
 		}
 		echo "var cats =" .$counter. ";"; 
 		?>
-		return cats;
-	
+		return cats; //what about dogs?
 	}
 	function changeCategory(subID,count)
 	{	
@@ -61,7 +52,6 @@
 		document.getElementById("redline").style.left= position +"px";
 		document.getElementById("redline").style.display= "none";
 		var xmlhttp;
-
 		xmlhttp=new XMLHttpRequest();
 		xmlhttp.onreadystatechange=function()
 		{
@@ -72,17 +62,13 @@
 		}
 		xmlhttp.open("GET","../module-selection-modified.php?cat="+ subID +"&type=3",true); //type=3 always for art
 		xmlhttp.send();
-		
 		var categories = numberofCats(); 											//number of categories for this type
 		while(categories >= 0){
 			document.getElementById("cat" + categories).className="button";
 			categories--;
 		}
-		
 		document.getElementById("cat" + count).className="button-clicked";
 	}
-	
-
 	</script>
 </head>
 <body>
