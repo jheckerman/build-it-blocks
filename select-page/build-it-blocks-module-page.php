@@ -79,7 +79,7 @@
 			$curr_date = date_format(date_create($curr_module['date-posted']), 'm/d/Y');
 			
 			//echoing the HTML for the title, author and date:
-			echo "<span class=\"module-title\">".$curr_title . "</span ><br/><span  class=\"module-subtitle\">Added by " . $curr_author_name. " on " . $curr_date. "</span>";
+			echo "<div class='title-wrapper'><div class=\"module-title\">".$curr_title . "</div ><div  class=\"module-subtitle\">Added by " . $curr_author_name. " on " . $curr_date. "</div></div>";
 		?>
 		<div class="line"> </div>
 		<br/>

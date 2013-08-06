@@ -7,62 +7,72 @@ body{
 	font-size: 1.5em;
 	font-weight: normal;
 	color: #808080;
-	margin: 0px 0px,0px, 0px;
-	padding: 0px 0px,0px, 0px;
-	}
-	
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	width:100%;
+	text-align:center;
+}
+
 .module-subtitle {
 	font-family: verdana, sans-serif;
 	font-size: 0.75em;
 	font-weight: normal;
 	color: #404040;
-	margin: -100px 0px,0px, 0px;
-	padding: 0px 0px,0px, 0px;
-	}
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	width:100%;
+	text-align:center;
+}
+
+.title-wrapper{
+	width:800px;
+	margin:auto;
+}
 
 h1 {
 	font-family: verdana, sans-serif;
 	font-size: .85em;
 	font-weight: normal;
 	color: #808080;
-	margin: 0px 0px,0px, 0px;
-	padding: 0px 0px,0px, 0px;
-	} 				
-		
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+} 				
+	
 h5 {
 	font-family: verdana, sans-serif;
 	font-size: .85em;
 	font-weight: normal;
 	color: #ff0000;
-	margin: 0px 0px,0px, 0px;
-	padding: 0px 0px,0px, 0px;
-	} 				
-		
+	margin: 0px 0px 0px  0px;
+	padding: 0px 0px 0px  0px;
+} 				
+	
 h2 {
 	font-family: verdana, sans-serif;
 	font-size: 1.0em;
 	font-weight: normal;
 	color: #000000;
-	margin: 0px 0px,0px, 0px;
-	padding: 0px 0px,0px, 0px;
-	} 				
-		
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+} 				
+	
 h3 {
 	font-family: verdana, sans-serif;
 	font-size: 1.0em;
 	font-weight: normal;
 	color: #808080;
-	margin: 0px 0px,0px, 0px;
-	padding: 0px 0px,0px, 0px;
-	} 				
-		
+	margin: 0px 0px 0px  0px;
+	padding: 0px 0px 0px 0px;
+} 				
+	
 h4 {
 	font-family: verdana, sans-serif;
 	font-size: 1.0em;
 	font-weight: normal;
 	color: #0000ff;
-	margin: 0px 0px,0px, 0px;
-	padding: 0px 0px,0px, 0px;} 
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+} 
 
 a:link{
 	color:#404040;
@@ -282,4 +292,41 @@ a:hover
 
 #empty-span{
 	clear:none;
+}
+
+.selection-container{
+	height:100px;
+	width:800px;
+	background-color:#FFFFFF;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:-10px;
+}
+
+#menu-jquery{
+	margin-left:-25px;
+}
+
+.button{
+	display:none;
+}
+
+.gray-line{
+	height:1px;
+	width:800px;
+	background-color:#404040;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:-72px;
+}
+
+#content{
+	width:800px;
+	height:600px;
+	margin-bottom:50px;
+	margin:auto;
+}
+
+.charlotte{ /*my personal favourite! :)*/
+	height:750px;
 }
