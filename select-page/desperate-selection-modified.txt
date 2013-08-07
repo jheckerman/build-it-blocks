@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+MODULE SELECTION MODIFIED
+
+<head>
+	<LINK href="../biy-stylesheet.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<table class="category-table">
+		<?php
+			include("db-connect.php"); //the db-connect.php file contains a single line that connects to the database
+			$cat = $_GET["cat"]; //take the subcategory: differs for every type
+			$type = $_GET["type"]; // take the category/type of modules: 1 for Junk; 2 for LEGO; 3 for Art; 4 for Code; 5 for Minecraft
+			if ($cat==0){ //?????????? WHY IS THIS AND WHAT DOES IT DO? :)))) 
+				$data = mysqli_query($con, "SELECT * FROM `module_index` WHERE `type`= $type");
+			}
+			else{ //get all the modules for this category(type) and subcategory
+				$data = mysqli_query($con, "SELECT * FROM `module_index` WHERE `subcategoryID`= $cat AND `type`= $type");
+			}
+			$i=0;
+			$col=4; //we have $col modules per row in the table
+			while($info = mysqli_fetch_array( $data )){
+				if($i% $col==0){ //go to a new row if this is the last column
+					echo "<tr class=\"selection-row\">";
+				}
+				$link="build-it-blocks-module-page.php?id=" . $info['ID']; //used to tell the module page which module this is
+				$temp = mysqli_query($con, "SELECT `icon` FROM `module_index` WHERE `id`=". $info['ID']); // gets all the icons for the filtered modules
+				$fetch = mysqli_fetch_array($temp); //all the filtered modules' icons go to $fetch
+				$img = $fetch['icon'];
+				echo "<td class='center-smaller'> <a title= \"" .$info['description']. "\" href=$link><img width=\"150px\" src ='../" . $img . "'><br>" . $info['name'] . "</a>"; //outputs the HTML code for the icons layout
+				echo "</td>";
+				$i++;
+			}
+			if($i% $col==0){ // go to a new row if 
+				echo "</tr>";
+			}
+			mysqli_close($con);
+		?>
+	</table>
+</body>
+</html>

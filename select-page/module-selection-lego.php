@@ -77,6 +77,7 @@
 		document.getElementById("lego").style.backgroundImage="url('images/button-down.png')"; //turn button white to let users know that 
 		document.getElementById("lego").onmouseout=""; //they are on this module selection page
 	</script>
+	<div class="title-wrapper"><div id="redline"></div></div>
 	<div class="selection-container">
 		<ul type="none" id="menu-jquery">
 			<li id="cat0" class="button" onClick="changeCategory(0,0)"> View All </li>

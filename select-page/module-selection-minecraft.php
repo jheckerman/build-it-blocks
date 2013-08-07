@@ -71,12 +71,17 @@
 	}
 	</script>
 </head>
+
+<!--ALL ABOVE WORKS-->
+
+
 <body>
 	<?php include("../bib-header-menu.php"); ?>
 	<script language="javascript">
 		document.getElementById("minecraft").style.backgroundImage="url('images/button-down.png')"; //turn button white to let users know that 
 		document.getElementById("minecraft").onmouseout=""; //they are on this module selection page
 	</script>
+	<div class="title-wrapper"><div id="redline"></div></div>
 	<div class="selection-container">
 		<ul type="none" id="menu-jquery" >
 			<li id="cat0" class="button" onClick="changeCategory(0,0)"> View All </li>
@@ -91,6 +96,7 @@
 			?>
 		</ul>
 	</div>
+	<!--ALL BELOW WORKS-->
 	<script> 
 		$("#menu-jquery li").show(300); //some animation to display categories
 		//changeCategory(0,0); //view all is selected by default

@@ -349,6 +349,7 @@ a:hover
 
 .charlotte{ /*my personal favourite! :)*/
 	height:750px;
+	display:none;
 }
 
 #bottom-gray-line{
@@ -369,4 +370,13 @@ a:hover
 
 #bottom-email{
 	color:#101010;
+}
+
+#redline{
+	background-color:#EB0000;
+	height:1px;
+	width:100px;
+	float:left;
+	position:relative;
+	display:none;
 }

@@ -77,10 +77,10 @@
 		document.getElementById("junk").style.backgroundImage="url('images/button-down.png')"; //turn button white to let users know that 
 		document.getElementById("junk").onmouseout=""; //they are on this module selection page
 	</script>
+	<div class="title-wrapper"><div id="redline"></div></div>
 	<div class="selection-container">
 		<ul type="none" id="menu-jquery">
 			<li id="cat0" class="button" onClick="changeCategory(0,0)"> View All </li>
-
 			<?php
 			include("../db-connect.php");
 			$temp = mysqli_query($con, "SELECT * FROM `category_table` WHERE `typeID`= 1"); //typeID =1 for junk
