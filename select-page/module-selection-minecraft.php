@@ -79,10 +79,6 @@
 	}
 	</script>
 </head>
-
-<!--ALL ABOVE WORKS-->
-
-
 <body>
 	<?php include("../bib-header-menu.php"); ?>
 	<script language="javascript">
@@ -104,7 +100,6 @@
 			?>
 		</ul>
 	</div>
-	<!--ALL BELOW WORKS-->
 	<script> 
 		$("#menu-jquery li").show(300); //some animation to display categories
 		//changeCategory(0,0); //view all is selected by default

@@ -20,8 +20,8 @@
 			$col=4; //we have $col modules per row in the table
 			
 			include("db-connect.php"); //the db-connect.php file contains a single line that connects to the database
-			$subcat = 1;//$_GET["cat"]; //take the subcategory: differs for every type
-			$type = 5; //$_GET["type"]; // take the category/type of modules: 1 for Junk; 2 for LEGO; 3 for Art; 4 for Code; 5 for Minecraft
+			$subcat = $_GET["cat"]; //take the subcategory: differs for every type
+			$type = $_GET["type"]; // take the category/type of modules: 1 for Junk; 2 for LEGO; 3 for Art; 4 for Code; 5 for Minecraft
 			if ($subcat==0){ //we say that the 0th subcategory is the "View All" view
 				$data = mysqli_query($con, "SELECT * FROM `module_index` WHERE `type`= $type");
 			}
@@ -57,8 +57,8 @@
 			<?php // we need to extract the modules from the database again for the tooltip images
 				$i=0;				//counting variable :) 
 				include("db-connect.php"); //the db-connect.php file contains a single line that connects to the database
-				$subcat = 1;//$_GET["cat"]; //take the subcategory: differs for every type
-				$type = 5;//$_GET["type"]; // take the category/type of modules: 1 for Junk; 2 for LEGO; 3 for Art; 4 for Code; 5 for Minecraft
+				$subcat = $_GET["cat"]; //take the subcategory: differs for every type
+				$type = $_GET["type"]; // take the category/type of modules: 1 for Junk; 2 for LEGO; 3 for Art; 4 for Code; 5 for Minecraft
 				if ($subcat==0){ //we say that the 0th subcategory is the "View All" view
 					$data = mysqli_query($con, "SELECT * FROM `module_index` WHERE `type`= $type");
 				}
