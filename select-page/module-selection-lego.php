@@ -2,6 +2,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
+	<script type="text/javascript" src="../stickytooltip.js">
+		/***********************************************
+		* Sticky Tooltip script- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+		* This notice MUST stay intact for legal use
+		* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+		***********************************************/
+	</script>
+	<link rel="stylesheet" type="text/css" href="../stickytooltip.css" /> <!--this stylesheet contains data for the image tooltip-->
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<LINK href="../biy-stylesheet.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
