@@ -56,7 +56,7 @@
 	{	
 		var position=(count *120) - 85; //used solely to control the position of the red line the numbers here are calibrated so that it aligns with the buttons
 		document.getElementById("redline").style.left= position +"px"; //redline moves to the position of the subcategory that is currently selected
-		document.getElementById("redline").style.display= "none";
+		document.getElementById("redline").style.display= "none"; // also, redline is invisible and serves only to pass parameters
 		//AJAX Script here
 		//the AJAX inserts the code from module-selection-modified.php into the content div. This makes the content display the module icons
 		var xmlhttp;
@@ -69,7 +69,8 @@
 			}
 		}
 		xmlhttp.open("GET","../module-selection-modified.php?cat="+ subID +"&type=3",true); //type=3 always for art
-		xmlhttp.send();		//AJAX script ends here
+		xmlhttp.send();
+		//AJAX script ends here
 		var categories = numberofCats(); //number of categories for this type, used in the following loop
 		//this loop sets all of the buttons to their default, unselected style
 		while(categories >= 0){
@@ -105,7 +106,9 @@
 			?>
 		</ul>
 	</div>
-
+	<script>
+		changeCategory(0,0); //view all is selected by default
+	</script>	
 	<div class="gray-line"></div>
 	<div id="content"> <!-- This contains the icons of all the modules. When changeCategory is called the innerHTML of content is changed-->
 		<img class="charlotte" src="images/charlotte.png">
