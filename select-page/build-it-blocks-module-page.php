@@ -16,19 +16,20 @@
 		var titleArr = new Array(); //contains all application titles
 		var descriptionArr = new Array (); ////contains all application descriptions
 		var stepArr = new Array(); //contains all instruction text
-		<?php
+		
+		<?php // this PHP script gets all the Applications/Instructions information about the module so that it can replace the content of the slider. :)
 			include("../db-connect.php");
-			$module = $_GET["id"];
-			$temp = mysqli_query($con, "SELECT * FROM `applications` WHERE `moduleID`=" . $module); //get the rows
+			$module = $_GET["id"]; // the ID is passed by the address of the page
+			$temp = mysqli_query($con, "SELECT * FROM `applications` WHERE `moduleID`=" . $module); //get the query of applications
 			$i=0;
-			while($app = mysqli_fetch_array($temp)){
+			while($app = mysqli_fetch_array($temp)){ //every application has a title and a description; this loop fills them all :)
 				echo "titleArr[".$i."]='" . $app['title'] . "';" ;
 				echo "descriptionArr[".$i."]='" . $app['description'] . "';" ;
 				$i++;
 			}
-			$temp = mysqli_query($con, "SELECT * FROM `steps` WHERE `moduleID`=" . $module); //get the rows
+			$temp = mysqli_query($con, "SELECT * FROM `steps` WHERE `moduleID`=" . $module); //get the query of steps
 			$i=0;
-			while($steps = mysqli_fetch_array($temp)){
+			while($steps = mysqli_fetch_array($temp)){ //every step has a description; this loop fills all the descriptions.
 				echo "stepArr[".$i."]='" . $steps['step-description'] . "';" ;
 				$i++;
 			}
@@ -66,15 +67,14 @@
 	
 	<?php include("../bib-header-menu.php"); ?>
 	<div>
-		<?php
+		<?php // this script gets the title, author and date of the module; they are displayed as a top bar.
 			include("../db-connect.php");
 			$module = $_GET["id"];
-			$temp = mysqli_query($con, "SELECT * FROM `module_index` WHERE `ID`=" . $module); //get the rows
+			$temp = mysqli_query($con, "SELECT * FROM `module_index` WHERE `ID`=" . $module); //query for the module
 			$curr_module = mysqli_fetch_array($temp);
-			$curr_title = $curr_module['name'];
-			$curr_author_ID = $curr_module['authorID'];
-			$curr_author = mysqli_fetch_array(mysqli_query($con, "SELECT * from `author` WHERE `authorID`=" . $curr_author_ID)); // get the author's row in the Author table
-			$curr_author_name = $curr_author['name']; // get the author's name
+			$curr_title = $curr_module['name']; //this gets the name of the module
+			$curr_author_ID = $curr_module['authorID']; // this gets the ID of the author of the module (it's a number)
+			$curr_author = mysqli_fetch_array(mysqli_query($con, "SELECT * from `author` WHERE `authorID`=" . $curr_author_ID)); // get the author's row in the Author table by the ID we just introduced
 			$curr_author_name = $curr_author['name']; // get the author's name
 			$curr_date = date_format(date_create($curr_module['date-posted']), 'm/d/Y');
 			
