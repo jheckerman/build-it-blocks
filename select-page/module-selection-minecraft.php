@@ -113,5 +113,6 @@
 	<div id="content">
 		<img class="charlotte" src="images/charlotte.png">
 	</div>
+	<div class="bottom-info"><?php include("../biy-bottom-info.html"); ?></div>
 </body>
 </html>

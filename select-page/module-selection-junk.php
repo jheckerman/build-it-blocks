@@ -112,5 +112,6 @@
 	<div id="content"> <!-- This contains the icons of all the modules. When changeCategory is called the innerHTML of content is changed-->
 		<img class="charlotte" src="images/charlotte.png">
 	</div>
+	<div class="bottom-info"><?php include("../biy-bottom-info.html"); ?></div>
 </body>
 </html>

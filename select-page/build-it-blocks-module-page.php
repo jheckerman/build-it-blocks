@@ -62,9 +62,6 @@
 	
 </head>
 <body>
-	
-	
-	
 	<?php include("../bib-header-menu.php"); ?>
 	<div>
 		<?php // this script gets the title, author and date of the module; they are displayed as a top bar.
@@ -84,9 +81,6 @@
 		<div class="line"> </div>
 		<br/>
 	</div>
-	
-	
-	
 	<div id="overview">
 		<div class="container-instructions"> <!--this slider contains the applications, but has the same layout as the slider for Instructions-->
 			<div class="container" id="c1">
@@ -122,10 +116,7 @@
 				
 			</div>	  
 		</div>      	
-	</div>
-	
-	
-	
+	</div>	
 	<div id="instr">
 		<div class="container-instructions"> <!--this slider contains the instructions-->
 			<div class="container" id="c2">
@@ -154,7 +145,6 @@
 				changeStep(1);
 			</script>
 		</div>
-			
 		<div class="centered-div">
 			<?php
 			include("../db-connect.php");
@@ -171,10 +161,7 @@
 		<div class="centered-div" onClick="HideInstr()">
 			<img src="images/overview-button.png" width="160px"/>
 		</div>
-	</div>
-	
-	
-	
+	</div>	
 	<!-- SlidesJS Required: Link to jQuery -->
 	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<!-- End SlidesJS Required -->
@@ -198,8 +185,7 @@
 				}
 			});
 		});
-  </script>
-  
+  </script>  
 	<script>
 		$(function() {
 			$('#slides2').slidesjs({
@@ -221,7 +207,7 @@
 		 //initially hide the instructions tab.
 	</script>
 	<!-- End SlidesJS Required -->
-	<div class="bottom-info"><?php include("../biy-bottom-info.html"); ?></div
+	<div class="bottom-info"><?php include("../biy-bottom-info.html"); ?></div>
 </body>
 </html>
 
