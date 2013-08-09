@@ -6,7 +6,7 @@
 		</li>			  
 		<li class="nav-button">
 		<!-- the list items themselves float to the left, but the insides of divs are centered -->
-			<a href="../bib-main-page.php">
+			<a href="bib-main-page.php">
 			<!-- inside of the reference we put a div that contains the button. Unless clicked, it is on button-up.png by default, and goes to button-down.png when we hover over it. -->
 			<!-- If clicked, it stays on button-down.png at all times.  -->
 				<div id="home" class="menu-button-blocks">

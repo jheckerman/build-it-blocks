@@ -107,7 +107,7 @@
 		</ul>
 	</div>
 	<script>
-		changeCategory(0,0); //view all is selected by default
+		//changeCategory(0,0); //view all is selected by default, CAUSING ISSUES
 	</script>
 	<div class="gray-line"></div>
 	<div id="content">
