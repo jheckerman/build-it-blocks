@@ -29,6 +29,11 @@ body{
 	margin:auto;
 }
 
+.bib-description-wrapper{
+	width:800px;
+	margin:50px auto;
+}
+
 h1 {
 	font-family: verdana, sans-serif;
 	font-size: .85em;
@@ -228,6 +233,10 @@ a:hover
 	width:800px;
 }
 
+.50pxdistanced{
+	margin:50px auto;
+}
+
 .instructions-slider{
 	width:800px;
 }
@@ -277,9 +286,8 @@ a:hover
 }
 
 #main-page-week-module-missions-container{
-	margin:auto;
+	margin:50px auto;
 	width:800px;
-	margin-top:100px;
 }
 
 #header-menu-container{
