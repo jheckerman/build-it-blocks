@@ -9,7 +9,7 @@
 			<a href="../bib-main-page.php">
 			<!-- inside of the reference we put a div that contains the button. Unless clicked, it is on button-up.png by default, and goes to button-down.png when we hover over it. -->
 			<!-- If clicked, it stays on button-down.png at all times.  -->
-				<div id="home" class="menu-button" onMouseOver="changeImage(this,'images/button-down.png')" onMouseOut="changeImage(this,'images/button-up.png')">
+				<div id="home" class="menu-button-blocks">
 					Blocks <!--I really really like it with one word only; we could always make it back to 'Blocks Home' :)-->
 				</div>
 			</a>
