@@ -2,6 +2,14 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
+	<script type="text/javascript" src="../stickytooltip.js">
+		/***********************************************
+		* Sticky Tooltip script- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+		* This notice MUST stay intact for legal use
+		* Visit Dynamic Drive at http://www.dynamicdrive.com/ for this script and 100s more
+		***********************************************/
+	</script>
+	<link rel="stylesheet" type="text/css" href="../stickytooltip.css" /> <!--this stylesheet contains data for the image tooltip-->
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<LINK href="../biy-stylesheet.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
@@ -48,7 +56,7 @@
 	{	
 		var position=(count *120) - 85; //used solely to control the position of the red line the numbers here are calibrated so that it aligns with the buttons
 		document.getElementById("redline").style.left= position +"px"; //redline moves to the position of the subcategory that is currently selected
-		document.getElementById("redline").style.display= "none";
+		document.getElementById("redline").style.display= "none"; // also, redline is invisible and serves only to pass parameters
 		//AJAX Script here
 		//the AJAX inserts the code from module-selection-modified.php into the content div. This makes the content display the module icons
 		var xmlhttp;
@@ -61,7 +69,8 @@
 			}
 		}
 		xmlhttp.open("GET","../module-selection-modified.php?cat="+ subID +"&type=3",true); //type=3 always for art
-		xmlhttp.send();		//AJAX script ends here
+		xmlhttp.send();
+		//AJAX script ends here
 		var categories = numberofCats(); //number of categories for this type, used in the following loop
 		//this loop sets all of the buttons to their default, unselected style
 		while(categories >= 0){
@@ -97,10 +106,13 @@
 			?>
 		</ul>
 	</div>
-
+	<script>
+		changeCategory(0,0); //view all is selected by default
+	</script>	
 	<div class="gray-line"></div>
 	<div id="content"> <!-- This contains the icons of all the modules. When changeCategory is called the innerHTML of content is changed-->
 		<img class="charlotte" src="images/charlotte.png">
 	</div>
+	<div class="bottom-info"><?php include("../biy-bottom-info.html"); ?></div>
 </body>
 </html>

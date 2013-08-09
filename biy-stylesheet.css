@@ -214,6 +214,7 @@ a:hover
 .centered-div{
 	text-align:center;
 	margin:auto;
+	width:800px;
 }
 
 .instructions-slider{
@@ -222,6 +223,7 @@ a:hover
 
 .container-instructions{
 	width:800px;
+	margin:auto;
 }
 
 .bottom-info{
@@ -232,7 +234,8 @@ a:hover
 	height:1px;
 	width:800px;
 	background-color:#404040;
-	margin-bottom:-4px;
+	clear:both;
+	margin: 0 auto -4px auto;
 }
 
 .category-table{
@@ -271,18 +274,18 @@ a:hover
 #header-menu-container{
 	width:800px;
 	margin-left:auto;
-	margin-right:auto;
-	clear:both;
+	margin-right:auto
 }
 
 #navigation-abr{
-	margins:0px;
-	list-style-type:none; /*list-type-style:none get rid of the bullets in the list*/
+	margin:0px;
+	list-style-type:none;
 	float:left;
 	height:50px;
 	width:800px;
 	padding:0px;
 	text-align:center;
+	clear:both
 }
 
 #biy-logo{
@@ -321,6 +324,7 @@ a:hover
 	margin-left:auto;
 	margin-right:auto;
 	margin-top:-10px;
+	clear:both;
 }
 
 #menu-jquery{
@@ -338,6 +342,7 @@ a:hover
 	margin-left:auto;
 	margin-right:auto;
 	margin-top:-72px;
+	clear:both;
 }
 
 #content{
