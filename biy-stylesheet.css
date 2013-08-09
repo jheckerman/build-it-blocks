@@ -214,6 +214,7 @@ a:hover
 .centered-div{
 	text-align:center;
 	margin:auto;
+	width:800px;
 }
 
 .instructions-slider{
