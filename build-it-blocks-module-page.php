@@ -1,6 +1,6 @@
 <html>
 <head>
-	<LINK href="../biy-stylesheet.css" rel="stylesheet" type="text/css">
+	<LINK href="biy-stylesheet.css" rel="stylesheet" type="text/css">
 	<meta charset="utf-8">
 	<title>Module</title>
 	
@@ -18,7 +18,7 @@
 		var stepArr = new Array(); //contains all instruction text
 		
 		<?php // this PHP script gets all the Applications/Instructions information about the module so that it can replace the content of the slider. :)
-			include("../db-connect.php");
+			include("db-connect.php");
 			$module = $_GET["id"]; // the ID is passed by the address of the page
 			$temp = mysqli_query($con, "SELECT * FROM `applications` WHERE `moduleID`=" . $module); //get the query of applications
 			$i=0;
@@ -62,10 +62,10 @@
 	
 </head>
 <body>
-	<?php include("../bib-header-menu.php"); ?>
+	<?php include("bib-header-menu.php"); ?>
 	<div>
 		<?php // this script gets the title, author and date of the module; they are displayed as a top bar.
-			include("../db-connect.php");
+			include("db-connect.php");
 			$module = $_GET["id"]; // the ID is passed by the address of the page
 			$temp = mysqli_query($con, "SELECT * FROM `module_index` WHERE `ID`=" . $module); //query for the module
 			$curr_module = mysqli_fetch_array($temp);
@@ -86,13 +86,13 @@
 			<div class="container" id="c1">
 				<div id="slides">
 					<?php
-						include("../db-connect.php");
+						include("db-connect.php");
 						$module = $_GET["id"]; // the ID is passed by the address of the page
 						$temp = mysqli_query($con, "SELECT * FROM `applications` WHERE `moduleID`=" . $module); //get the query of applications
 						while($app = mysqli_fetch_array($temp)){  //applications sildes contain only the pictures, and the title+descriptions are outside of the slider
 							echo "
 							<div class=\"img_wrapper\">
-								<img src=\"../" .$app['picture'] ." \"alt=\" \" class=\"wrapped_picture\">
+								<img src=\"" .$app['picture'] ." \"alt=\" \" class=\"wrapped_picture\">
 							</div>";
 							}
 						mysqli_close($con);
@@ -122,14 +122,14 @@
 			<div class="container" id="c2">
 				<div id="slides2">
 					<?php
-						include("../db-connect.php");
+						include("db-connect.php");
 						$module = $_GET["id"]; // the ID is passed by the address of the page
 						$temp = mysqli_query($con, "SELECT * FROM `steps` WHERE `moduleID`=" . $module); //get the query of instructions
 						while($array = mysqli_fetch_array($temp)){ //instruction sildes contain only the pictures, and the step# + descriptions are outside of the slider
 							echo "<div id=\"instructions-slider\">";
 								echo "
 										<div class=\"img_wrapper\">
-										<img class=\"wrapped_picture\" src=\"../" .$array['image-path'] ."\" alt=\"\">
+										<img class=\"wrapped_picture\" src=\"" .$array['image-path'] ."\" alt=\"\">
 									</div>\n";
 							echo "</div>";
 						}
@@ -147,7 +147,7 @@
 		</div>
 		<div class="centered-div">
 			<?php
-			include("../db-connect.php");
+			include("db-connect.php");
 			$module_number = $_GET["id"]; // the ID is passed by the address of the page
 			$temp = mysqli_query($con, "SELECT * FROM `module_index` WHERE `ID`=" . $module_number);  //get the query of instructions
 			$module = mysqli_fetch_array($temp);
@@ -207,7 +207,7 @@
 		 //initially hide the instructions tab.
 	</script>
 	<!-- End SlidesJS Required -->
-	<div class="bottom-info"><?php include("../biy-bottom-info.html"); ?></div>
+	<div class="bottom-info"><?php include("biy-bottom-info.html"); ?></div>
 </body>
 </html>
 

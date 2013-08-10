@@ -2,7 +2,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-	<script type="text/javascript" src="../stickytooltip.js">
+	<script type="text/javascript" src="stickytooltip.js">
 		/***********************************************
 		* Sticky Tooltip script- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
 		* This notice MUST stay intact for legal use
@@ -11,7 +11,7 @@
 	</script>
 	<link rel="stylesheet" type="text/css" href="../stickytooltip.css" /> <!--this stylesheet contains data for the image tooltip-->
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-	<LINK href="../biy-stylesheet.css" rel="stylesheet" type="text/css">
+	<LINK href="biy-stylesheet.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
 	<script type="text/javascript" src="jquery.color.js"></script>
 	<script type="text/javascript">		
@@ -45,7 +45,7 @@
 	<script language="javascript">
 	function numberofCats(){ //counts the number of categories that type has
 		<?php
-		include("../db-connect.php");
+		include("db-connect.php");
 		$temp = mysqli_query($con, "SELECT * FROM `category_table` WHERE `typeID`= 4"); //typeID =4 for programming
 		$counter=0;
 		while($info = mysqli_fetch_array( $temp )){
@@ -71,7 +71,7 @@
 				document.getElementById("content").innerHTML=xmlhttp.responseText;
 			}
 		}
-		xmlhttp.open("GET","../module-selection-modified.php?cat="+ subID +"&type=4",true); //type=4 always for programming
+		xmlhttp.open("GET","module-selection-modified.php?cat="+ subID +"&type=4",true); //type=4 always for programming
 		xmlhttp.send();
 		//AJAX script ends here
 		var categories = numberofCats(); //number of categories for this type, used in the following loop
@@ -86,7 +86,7 @@
 	</script>
 </head>
 <body>
-	<?php include("../bib-header-menu.php"); ?>
+	<?php include("bib-header-menu.php"); ?>
 	<script language="javascript">
 		//this script changes the attributes of one of the header button elements in the included header
 		document.getElementById("programming").style.backgroundImage="url('images/button-down.png')";//change the background image to let users know that they are on this module selection page
@@ -97,7 +97,7 @@
 		<ul type="none" id="menu-jquery"> <!-- unordered list of all subcategories-->
 			<li id="cat0" class="button" onClick="changeCategory(0,0)"> View All </li> <!-- view all button NOTE:view all does not actually have a subcategoryID, it is 0 here so that the changeCategory function works-->
 			<?php
-			include("../db-connect.php");
+			include("db-connect.php");
 			$temp = mysqli_query($con, "SELECT * FROM `category_table` WHERE `typeID`= 4"); //typeID =4 for programming
 			$counter=1; //used to label each category selection button as 1,2,3,4 ...
 			while($info = mysqli_fetch_array( $temp )){//populates the row of categories with the categories
@@ -116,6 +116,6 @@
 	<div id="content">  <!-- This contains the icons of all the modules. When changeCategory is called the innerHTML of content is changed-->
 		<img class="charlotte" src="images/charlotte.png">
 	</div>
-	<div class="bottom-info"><?php include("../biy-bottom-info.html"); ?></div>
+	<div class="bottom-info"><?php include("biy-bottom-info.html"); ?></div>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<LINK href="../biy-stylesheet.css" rel="stylesheet" type="text/css">
+	<LINK href="biy-stylesheet.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 	<script type="text/javascript" src="stickytooltip.js">
 		/***********************************************
@@ -36,7 +36,7 @@
 				$temp = mysqli_query($con, "SELECT `icon` FROM `module_index` WHERE `id`=". $info['ID']); // gets all the icons for the filtered modules
 				$fetch = mysqli_fetch_array($temp); //all the filtered modules' icons go to $fetch
 				$img = $fetch['icon'];
-				echo "<td class='center-smaller'> <a title= \"" .$info['description']. "\" href=$link><img class=\"icon\" src ='../" . $img . "' data-tooltip=\"sticky-tooltip-" . $info['ID'] . "\"><br>" . $info['name'] . "</a>"; //outputs the HTML code for the icons layout
+				echo "<td class='center-smaller'> <a title= \"" .$info['description']. "\" href=$link><img class=\"icon\" src =' " . $img . "' data-tooltip=\"sticky-tooltip-" . $info['ID'] . "\"><br>" . $info['name'] . "</a>"; //outputs the HTML code for the icons layout
 				echo "</td>";
 				$i++;
 				if(($i% $col)==0){ // if a new row should start with the next module, close the row

@@ -2,12 +2,10 @@
 <html>
 <head>
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-	<!--link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/-->
-    <link rel="stylesheet" href="../menu-stylesheet.css" type="text/css" media="screen"/>
-	<link rel="stylesheet" href="../biy-stylesheet.css" type="text/css" media="screen"/>
+	<link rel="stylesheet" href="biy-stylesheet.css" type="text/css" media="screen"/>
 </head>
 <body>
-	<?php include("../bib-header-menu.php");?>
+	<?php include("bib-header-menu.php");?>
 	<div class="gray-line"></div>
 	<div class="bib-description-wrapper">
 		<div class="module-title">
@@ -16,11 +14,14 @@
 	</div>
 	<div id="main-page-week-module-missions-container">
 		<div id="module-of-the-week">
-			Module of the Week
+			Module of the Week <br/>
+			<img src="http://build-it-yourself.com/images/robots.jpg">
 		</div>		
 		<div id="missions">
-			Missions
+			Missions <br/>
+			<img src="http://build-it-yourself.com/images/pirate-team-max-devin.jpg">
 		</div>
-	</div>	
+	</div>
+	<div class="bottom-info"><?php include("biy-bottom-info.html"); ?></div>
 </body>
 </html>
