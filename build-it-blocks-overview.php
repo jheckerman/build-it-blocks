@@ -53,12 +53,7 @@
 		});
   </script>  
   
-	<script>
-		$(document).ready(function() {
-			HideInstr();
-		});
-		 //initially hide the instructions tab.
-	</script>
+
 </head>
 <body>
 	<?php include("bib-header-menu.php"); ?>
@@ -102,7 +97,7 @@
 			</div>
 			
 			<div id="build-it-button"> <!--user clicks the button -> gets redirected to the Instructions slider-->
-				<div id="build-button" onClick= "DisplayInstr()">
+				<div id="build-button">
 					<?php 
 						$moduleID = $_GET["id"]; 
 						echo "<a href=\"build-it-blocks-instructions.php?id=" . $moduleID. "\"><img id=\"build-image\" src=\"images/build-it.png\"/></a>"

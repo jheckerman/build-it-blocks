@@ -15,7 +15,7 @@
 	</div>
 	<ul id="sdt_menu" class="sdt_menu">
 		<li>
-			<a href="select-page/module-selection-junk.php">
+			<a href="module-selection-junk.php">
 				<img src="menu-icons/menu-junk.jpg" alt="">
 				<span class="sdt_active"></span>
 				<span class="sdt_wrap">
@@ -24,7 +24,7 @@
 			</a>
 		</li>
 		<li>
-			<a href="select-page/module-selection-lego.php">
+			<a href="module-selection-lego.php">
 				<img src="menu-icons/menu-lego.jpg" alt=""/>
 				<span class="sdt_active"></span>
 				<span class="sdt_wrap">
@@ -33,7 +33,7 @@
 			</a>
 		</li>
 		<li>
-			<a href="select-page/module-selection-art.php">
+			<a href="module-selection-art.php">
 				<img src="menu-icons/menu-art.jpg" alt=""/>
 				<span class="sdt_active"></span>
 				<span class="sdt_wrap">
@@ -42,7 +42,7 @@
 			</a>
 		</li>
 		<li>
-			<a href="select-page/module-selection-programming.php">
+			<a href="module-selection-programming.php">
 				<img src="menu-icons/menu-programming.jpg" alt=""/>
 				<span class="sdt_active"></span>
 				<span class="sdt_wrap">
@@ -51,7 +51,7 @@
 			</a>
 		</li>
 		<li>
-			<a href="select-page/module-selection-minecraft.php">
+			<a href="module-selection-minecraft.php">
 				<img src="menu-icons/menu-minecraft.jpg" alt=""/>
 				<span class="sdt_active"></span>
 				<span class="sdt_wrap">
@@ -60,6 +60,8 @@
 			</a>
 		</li>
 	</ul>
+	<br/>
+	<br/>
 	<br/>
 	<div id="main-page-week-module-missions-container">
 		<div id="module-of-the-week">

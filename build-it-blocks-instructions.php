@@ -111,7 +111,7 @@
 		}
 		?>
 	</div>
-	<div class="centered-div" onClick="HideInstr()">
+	<div class="centered-div">
 		<?php 
 		$moduleID = $_GET["id"]; 
 		echo "<a href=\"build-it-blocks-overview.php?id=" . $moduleID. "\"><img src=\"images/overview-button.png\" /></a>"
