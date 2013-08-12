@@ -4,13 +4,11 @@
 	<meta charset="utf-8">
 	<title>Module</title>
 	
-	<!-- CSS&JS for slidesjs slider -->
+	<!-- CSS for slidesjs slider -->
 	<link rel="stylesheet" href="css/slidesjs.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/module-stylesheet.css">
-		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script src="jquery.slides.min.js"></script>
-	<!-- End CSS&JS for slidesjs slider -->
+	<!-- End CSS for slidesjs slider -->
 
 	<script type="text/javascript">
 		var row=1; //variable that tracks which application you are on
@@ -61,43 +59,7 @@
 		});
 		}
 	</script>
-	<script>
-		$(function() {
-			$('#slides').slidesjs({
-				width: 475,
-				height: 350,
-				navigation:false,
-				pagination: {
-					active:false
-				},
-				callback:{
-					complete: function(number){
-						changeApp(number);
-					}
-				}
-			});
-		});
-  </script>  
-	<script>
-		$(function() {
-			$('#slides2').slidesjs({
-				width: 475,
-				height: 350,
-				navigation: false,
-				callback:{
-					complete: function(number){
-						changeStep(number);
-					}
-				}
-			});
-		});
-	</script>
-	<script>
-		$(document).ready(function() {
-			HideInstr();
-		});
-		 //initially hide the instructions tab.
-	</script>
+	
 </head>
 <body>
 	<?php include("bib-header-menu.php"); ?>
@@ -200,6 +162,51 @@
 			<img src="images/overview-button.png" width="160px"/>
 		</div>
 	</div>	
+	<!-- SlidesJS Required: Link to jQuery -->
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<!-- End SlidesJS Required -->
+	<!-- SlidesJS Required: Link to jquery.slides.js -->
+	<script src="jquery.slides.min.js"></script>
+	<!-- End SlidesJS Required -->
+	<!-- SlidesJS REQUIRED FUNCTIONS -->
+	<script>
+		$(function() {
+			$('#slides').slidesjs({
+				width: 475,
+				height: 350,
+				navigation:false,
+				pagination: {
+					active:false
+				},
+				callback:{
+					complete: function(number){
+						changeApp(number);
+					}
+				}
+			});
+		});
+  </script>  
+	<script>
+		$(function() {
+			$('#slides2').slidesjs({
+				width: 475,
+				height: 350,
+				navigation: false,
+				callback:{
+					complete: function(number){
+						changeStep(number);
+					}
+				}
+			});
+		});
+	</script>
+	<script>
+		$(document).ready(function() {
+			HideInstr();
+		});
+		 //initially hide the instructions tab.
+	</script>
+	<!-- End SlidesJS Required -->
 	<div class="bottom-info"><?php include("biy-bottom-info.html"); ?></div>
 </body>
 </html>
