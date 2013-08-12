@@ -111,7 +111,7 @@
 			
 			<div id="caption">
 				<script>
-						changeApp(1);
+						changeApp(1); //changeApp(1) sets the caption to the first application
 				</script>
 				
 			</div>	  
@@ -125,7 +125,7 @@
 						include("db-connect.php");
 						$module = $_GET["id"]; // the ID is passed by the address of the page
 						$temp = mysqli_query($con, "SELECT * FROM `steps` WHERE `moduleID`=" . $module); //get the query of instructions
-						while($array = mysqli_fetch_array($temp)){ //instruction sildes contain only the pictures, and the step# + descriptions are outside of the slider
+						while($array = mysqli_fetch_array($temp)){ //instruction slides contain only the pictures, and the step# + descriptions are outside of the slider
 							echo "<div id=\"instructions-slider\">";
 								echo "
 										<div class=\"img_wrapper\">
@@ -140,9 +140,9 @@
 				</div>
 			</div>
 		</div>
-		<div id="caption2">
+		<div id="caption2"> <!--text of the instructions-->
 			<script>
-				changeStep(1);
+				changeStep(1); //sets text to the text of step 1 on start up
 			</script>
 		</div>
 		<div class="centered-div">

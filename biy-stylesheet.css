@@ -72,10 +72,10 @@ h3 {
 	
 h4 {
 	font-family: verdana, sans-serif;
-	font-size: 1.0em;
-	font-weight: normal;
-	color: #0000ff;
-	margin: 0px 0px 0px 0px;
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #000000;
+	margin: 0px 0px 10px 0px;
 	padding: 0px 0px 0px 0px;
 } 
 
@@ -171,6 +171,7 @@ a:hover
 	height:25px;
 	padding-top:3px;
 	font-family:"verdana", verdana, sans-serif;
+	cursor: pointer; cursor: hand;
 	}
 	
 .button-clicked{
@@ -183,6 +184,7 @@ a:hover
 	color:#EB0000;
 	padding-top:3px;
 	font-family:"verdana", verdana, sans-serif;	
+	cursor: pointer; cursor: hand;
 	}
 	
 .selection-row{
@@ -210,6 +212,8 @@ a:hover
 	width:325px;
 	float:right;
 	text-align:center;
+	cursor: pointer; cursor: hand;
+	margin-bottom:30px
 }
 
 #build-button{
@@ -223,14 +227,22 @@ a:hover
 }
 
 #caption{
-	margin:auto;
-	text-align:center;
+	margin-left:500px;
+	text-align:left;
+}
+
+#caption2 {
+	height:315px;
+	margin-left:850px;
+	text-align:left;
+	width:300px;
 }
 
 .centered-div{
 	text-align:center;
 	margin:auto;
 	width:800px;
+	cursor: pointer; cursor: hand;
 }
 
 .50pxdistanced{
@@ -291,13 +303,13 @@ a:hover
 #missions img{
 	width:100%;
 	margin: 20px 0px;	
-	border: solid black 5px;
+	border: solid black 3px;
 }
 
 #module-of-the-week img{
 	width:100%;
 	margin: 20px 0px;
-	border: solid black 5px;
+	border: solid black 3px;
 }
 
 #main-page-week-module-missions-container{
