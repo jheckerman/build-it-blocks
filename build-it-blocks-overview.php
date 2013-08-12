@@ -14,10 +14,8 @@
 
 	<script type="text/javascript">
 		var row=1; //variable that tracks which application you are on
-		var step=1; //variable that tracks which step you are on
 		var titleArr = new Array(); //contains all application titles
 		var descriptionArr = new Array (); ////contains all application descriptions
-		var stepArr = new Array(); //contains all instruction text
 		
 		<?php // this PHP script gets all the Applications/Instructions information about the module so that it can replace the content of the slider. :)
 			include("db-connect.php");
@@ -29,37 +27,13 @@
 				echo "descriptionArr[".$i."]='" . $app['description'] . "';" ;
 				$i++;
 			}
-			$temp = mysqli_query($con, "SELECT * FROM `steps` WHERE `moduleID`=" . $module); //get the query of steps
-			$i=0;
-			while($steps = mysqli_fetch_array($temp)){ //every step has a description; this loop fills all the descriptions.
-				echo "stepArr[".$i."]='" . $steps['step-description'] . "';" ;
-				$i++;
-			}
 		?>
 		function changeApp(number){
 			var newTitle = titleArr[number-1];
 			var newDescrip = descriptionArr[number-1];
 			document.getElementById("caption").innerHTML="<h4>" + newTitle + "</h4>"  + newDescrip;
 		}
-		
-		function changeStep(number){
-			var newStep = stepArr[number-1];
-			document.getElementById("caption2").innerHTML="<h4> Step: " + number + "</h4>"  + newStep;
-		}
 			 
-		function HideInstr(){
-		$(document).ready(function() {
-			document.getElementById("instr").style.display="none";
-			document.getElementById("overview").style.display="inline";	//show the overview
-		});
-		}
-		
-		function DisplayInstr(){
-		$(document).ready(function() {
-			document.getElementById("instr").style.display="inline";
-			document.getElementById("overview").style.display="none";	//hide the overview
-		});
-		}
 	</script>
 	<script>
 		$(function() {
@@ -78,20 +52,7 @@
 			});
 		});
   </script>  
-	<script>
-		$(function() {
-			$('#slides2').slidesjs({
-				width: 475,
-				height: 350,
-				navigation: false,
-				callback:{
-					complete: function(number){
-						changeStep(number);
-					}
-				}
-			});
-		});
-	</script>
+  
 	<script>
 		$(document).ready(function() {
 			HideInstr();
@@ -141,9 +102,11 @@
 			</div>
 			
 			<div id="build-it-button"> <!--user clicks the button -> gets redirected to the Instructions slider-->
-				<br/>
 				<div id="build-button" onClick= "DisplayInstr()">
-					<img id="build-image" src="images/build-it.png"/>
+					<?php 
+						$moduleID = $_GET["id"]; 
+						echo "<a href=\"build-it-blocks-instructions.php?id=" . $moduleID. "\"><img id=\"build-image\" src=\"images/build-it.png\"/></a>"
+					?>
 				</div>
 			</div>
 			
@@ -155,51 +118,7 @@
 			</div>	  
 		</div>      	
 	</div>	
-	<div id="instr">
-		<div class="container-instructions"> <!--this slider contains the instructions-->
-			<div class="container" id="c2">
-				<div id="slides2">
-					<?php
-						include("db-connect.php");
-						$module = $_GET["id"]; // the ID is passed by the address of the page
-						$temp = mysqli_query($con, "SELECT * FROM `steps` WHERE `moduleID`=" . $module); //get the query of instructions
-						while($array = mysqli_fetch_array($temp)){ //instruction slides contain only the pictures, and the step# + descriptions are outside of the slider
-							echo "<div id=\"instructions-slider\">";
-								echo "
-										<div class=\"img_wrapper\">
-										<img class=\"wrapped_picture\" src=\"" .$array['image-path'] ."\" alt=\"\">
-									</div>\n";
-							echo "</div>";
-						}
-						mysqli_close($con);
-					?>
-					<a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left icon-large"></i></a> <!--the LEFT arrow -->
-					<a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right icon-large"></i></a> <!--the RIGHT arrow -->
-				</div>
-			</div>
-		</div>
-		<div id="caption2"> <!--text of the instructions-->
-			<script>
-				changeStep(1); //sets text to the text of step 1 on start up
-			</script>
-		</div>
-		<div class="centered-div">
-			<?php
-			include("db-connect.php");
-			$module_number = $_GET["id"]; // the ID is passed by the address of the page
-			$temp = mysqli_query($con, "SELECT * FROM `module_index` WHERE `ID`=" . $module_number);  //get the query of instructions
-			$module = mysqli_fetch_array($temp);
-			$module_download_address = $module ['download-link']; //get the download link for the module (some modules only)
-			$module_download_type = $module ['download-type']; // get the type of download: plain text,e.g. "this module"
-			if($module_download_type!= ""){
-				echo "<a href=\" ".$module_download_address."\">Download ".$module_download_type."</a>"; //if the download-type is "this module", you output "...Download this module."
-			}
-			?>
-		</div>
-		<div class="centered-div" onClick="HideInstr()">
-			<img src="images/overview-button.png" width="160px"/>
-		</div>
-	</div>	
+
 	<div class="bottom-info"><?php include("biy-bottom-info.html"); ?></div>
 </body>
 </html>

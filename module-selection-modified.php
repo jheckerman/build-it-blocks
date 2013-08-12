@@ -32,7 +32,7 @@
 				if(($i%$col)==0){ //go to a new row if this is the last column
 					echo "<tr class=\"selection-row\">";
 				}
-				$link="build-it-blocks-module-page.php?id=" . $info['ID']; //used to tell the module page which module this is
+				$link="build-it-blocks-overview.php?id=" . $info['ID']; //used to tell the module page which module this is
 				$temp = mysqli_query($con, "SELECT `icon` FROM `module_index` WHERE `id`=". $info['ID']); // gets all the icons for the filtered modules
 				$fetch = mysqli_fetch_array($temp); //all the filtered modules' icons go to $fetch
 				$img = $fetch['icon'];
