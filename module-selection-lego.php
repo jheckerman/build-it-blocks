@@ -43,7 +43,7 @@
 	function numberofCats(){ //counts the number of categories that type has
 		<?php
 		include("db-connect.php");
-		$temp = mysqli_query($con, "SELECT * FROM `category_table` WHERE `typeID`= 1"); //typeID =1 lego, same cats as junk
+		$temp = mysqli_query($con, "SELECT * FROM `category_table` WHERE `typeID`= 2"); //typeID =2 lego
 		$counter=0;
 		while($info = mysqli_fetch_array( $temp )){
 			$counter++;
@@ -94,7 +94,7 @@
 			<li id="cat0" class="button" onClick="changeCategory(0,0)"> View All </li><!-- view all button NOTE:view all does not actually have a subcategoryID, it is 0 here so that the changeCategory function works-->
 			<?php
 			include("db-connect.php");
-			$temp = mysqli_query($con, "SELECT * FROM `category_table` WHERE `typeID`= 1"); //typeID =1 lego, same cats as junk
+			$temp = mysqli_query($con, "SELECT * FROM `category_table` WHERE `typeID`= 2"); //typeID =2 lego
 			$counter=1; //used to label each category selection button as 1,2,3,4 ...
 			while($info = mysqli_fetch_array( $temp )){
 				//each category button has an id "cat1", "cat2", "cat3", ... each button calls changeCategory with 2 arguments: its subcategoryID from the database, and its count value
