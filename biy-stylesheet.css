@@ -172,6 +172,7 @@ a:hover
 	padding-top:3px;
 	font-family:"verdana", verdana, sans-serif;
 	cursor: pointer; cursor: hand;
+	list-style-type: none;
 	}
 	
 .button-clicked{
@@ -185,6 +186,7 @@ a:hover
 	padding-top:3px;
 	font-family:"verdana", verdana, sans-serif;	
 	cursor: pointer; cursor: hand;
+	list-style-type: none;
 	}
 	
 .selection-row{
