@@ -63,8 +63,15 @@
 	<br/>
 	<div id="main-page-week-module-missions-container">
 		<div id="module-of-the-week">
-			Module of the Week <br/>
+			Newest Module: <br/>
+			<?php
+				include("db-connect.php");
+				$temp = mysqli_query($con, "SELECT * FROM `module_index` ORDER BY -`date-posted`");
+				$info = mysqli_fetch_array( $temp );
+				echo $info['name'];
+			?>
 			<img src="http://build-it-yourself.com/images/robots.jpg">
+
 		</div>		
 		<div id="missions">
 			Missions <br/>
