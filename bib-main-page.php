@@ -68,12 +68,13 @@
 			Newest Module: <br/>
 			<?php
 				include("db-connect.php");
-				$temp = mysqli_query($con, "SELECT * FROM `module_index` ORDER BY -`date-posted`");
-				$info = mysqli_fetch_array( $temp );
+				$temp = mysqli_query($con, "SELECT * FROM `module_index` ORDER BY -`date-posted`"); //order the list of modules my date
+				$info = mysqli_fetch_array( $temp ); //get first module of that list, which will be the newest
 				echo $info['name'];
+				echo "<a href='http://localhost/build-it-blocks/build-it-blocks-overview.php?id=". $info['ID'] ."'>";
+				echo "<img src=\"". $info['icon-tooltip'] ."\">"; //get the icon-tooltip, which is a promotional image for the module
+				echo "</a>";
 			?>
-			<img src="http://build-it-yourself.com/images/robots.jpg">
-
 		</div>		
 		<div id="missions">
 			Missions <br/>
