@@ -1,5 +1,5 @@
 <div id="header-menu-container" >
-	<ul style="margin:0px;  list-style-type:none; float:left; height:50px; width:800px; padding:0px; text-align:center; clear:both">
+	<ul style="margin:0px;  list-style-type:none; float:left; height:50px; width:810px; padding:0px; text-align:center; clear:both">
 		<li id="biy-logo"> <!-- I'm not really sure 35px is the right size, we need to do some calculation to make the BIY logo align with the buttons. -->
 		<!-- so, the leftest item in the navigation bar is the BIY logo that is an active link to the main BIY website-->
 			<a href="http://build-it-yourself.com"><img src="images/biy-logo.gif"></a>
