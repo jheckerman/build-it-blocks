@@ -16,7 +16,7 @@
 	<ul id="sdt_menu" class="sdt_menu">
 		<li>
 			<a href="select-page/module-selection-junk.php">
-				<img src="menu-icons/menu-junk.jpg" alt=""/>
+				<img src="menu-icons/menu-junk.jpg" alt="">
 				<span class="sdt_active"></span>
 				<span class="sdt_wrap">
 					<span class="sdt_link"><div class="menu-text">Junk</div></span>
