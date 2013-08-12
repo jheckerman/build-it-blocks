@@ -143,7 +143,7 @@ a:hover
 	font-family:"verdana", verdana, sans-serif;
 	font-size:9pt;
 	padding-left:0px;
-	cursor: pointer; cursor: hand;
+	cursor: pointer;
 }
 
 .menu-button-blocks{
@@ -175,7 +175,7 @@ a:hover
 	height:25px;
 	padding-top:3px;
 	font-family:"verdana", verdana, sans-serif;
-	cursor: pointer; cursor: hand;
+	cursor: pointer;
 	list-style-type: none;
 	}
 	
@@ -189,7 +189,7 @@ a:hover
 	color:#EB0000;
 	padding-top:3px;
 	font-family:"verdana", verdana, sans-serif;	
-	cursor: pointer; cursor: hand;
+	cursor: pointer;
 	list-style-type: none;
 	}
 	
@@ -215,15 +215,19 @@ a:hover
 
 #build-it-button{
 	display:inline-block;
-	width:325px;
+	width:300px;
 	float:right;
 	text-align:center;
-	cursor: pointer; cursor: hand;
-	margin-bottom:30px
+	cursor: pointer;
+	border: none;
+	position: absolute;
+	bottom: 0;
+	left:0;
 }
 
 #build-button{
 	width:300px;
+	height:;
 	float:right;
 	text-align:center;
 }
@@ -233,22 +237,33 @@ a:hover
 }
 
 #caption{
-	margin-left:63%;
+	max-height:350px;
 	text-align:left;
+	width:300px;
+	margin: auto;
 }
 
 #caption2 {
-	height:315px;
-	margin-left:63%;
+	max-height:350px;
 	text-align:left;
-	width:290px;
+	width:300px;
+	margin: auto;
+}
+
+#caption-and-button
+{
+	float:right;
+	width:300px;
+	height:375px;
+	text-align:left;
+	position:relative;
 }
 
 .centered-div{
 	text-align:center;
 	margin:auto;
 	width:800px;
-	cursor: pointer; cursor: hand;
+	cursor: pointer;
 }
 
 .50pxdistanced{
@@ -309,13 +324,13 @@ a:hover
 #missions img{
 	width:100%;
 	margin: 20px 0px;	
-	border: solid black 3px;
+	border: solid #404040 1px;
 }
 
 #module-of-the-week img{
 	width:100%;
 	margin: 20px 0px;
-	border: solid black 3px;
+	border: solid #404040 1px;
 }
 
 #main-page-week-module-missions-container{
@@ -329,7 +344,7 @@ a:hover
 	margin-right:auto
 }
 
-#navigation-abr{
+#navigation-bar{
 	margin:0px;
 	list-style-type:none;
 	float:left;
@@ -381,7 +396,7 @@ a:hover
 }
 
 .selection-container{
-	height:100px;
+	height:28px;
 	width:800px;
 	background-color:#FFFFFF;
 	margin-left:auto;
@@ -394,6 +409,11 @@ a:hover
 	margin-left:-25px;
 }
 
+#instr,
+#overview{
+	height:375px;
+}
+
 .button{
 	display:none;
 }
@@ -404,7 +424,6 @@ a:hover
 	background-color:#404040;
 	margin-left:auto;
 	margin-right:auto;
-	margin-top:-72px;
 	clear:both;
 }
 

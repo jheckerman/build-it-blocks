@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="css/slidesjs.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/module-stylesheet.css">
-		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 	<script src="jquery.slides.min.js"></script>
 	<!-- End CSS&JS for slidesjs slider -->
 	<script type="text/javascript">
@@ -33,8 +33,8 @@
 	<script>
 		$(function() {
 			$('#slides').slidesjs({
-				width: 475,
-				height: 350,
+				width: 400,
+				height: 300,
 				navigation:false,
 				pagination: {
 					active:false
@@ -65,7 +65,7 @@
 			echo "<div class='title-wrapper'><div class=\"module-title\">".$curr_title . "</div ><div  class=\"module-subtitle\">Added by " . $curr_author_name. " on " . $curr_date. "</div></div>";
 		?>
 		<div class="line"></div>
-		<br/>
+		<br>
 	</div>
 	<div id="overview">
 		<div class="container-instructions"> <!--this slider contains the applications, but has the same layout as the slider for Instructions-->
@@ -86,23 +86,37 @@
 					<a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left icon-large"></i></a> <!--the LEFT arrow -->
 					<a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right icon-large"></i></a> <!--the RIGHT arrow -->
 				</div>
-			</div>			
-			<div id="build-it-button"> <!--user clicks the button -> gets redirected to the Instructions slider-->
-				<div id="build-button">
-					<?php 
-						$moduleID = $_GET["id"]; 
-						echo "<a href=\"build-it-blocks-instructions.php?id=" . $moduleID. "\"><img id=\"build-image\" src=\"images/build-it.png\"/></a>"
-					?>
-				</div>
-			</div>			
-			<div id="caption">
-				<script>
-						changeApp(1); //changeApp(1) sets the caption to the first application
-				</script>				
-			</div>	  
+			</div>
+			<div id="caption-and-button">
+				<div id="caption">
+					<script>
+							changeApp(1); //changeApp(1) sets the caption to the first application
+					</script>
+					<div id="build-it-button"> <!--user clicks the button -> gets redirected to the Instructions slider-->
+						<?php
+							include("db-connect.php");
+							$module_number = $_GET["id"]; // the ID is passed by the address of the page
+							$temp = mysqli_query($con, "SELECT * FROM `module_index` WHERE `ID`=" . $module_number);  //get the query of instructions
+							$module = mysqli_fetch_array($temp);
+							$module_download_address = $module ['download-link']; //get the download link for the module (some modules only)
+							$module_download_type = $module ['download-type']; // get the type of download: plain text,e.g. "this module"
+							if($module_download_type!= ""){
+								echo "<a href=\" ".$module_download_address."\">Download ".$module_download_type."</a>"; //if the download-type is "this module", you output "...Download this module."
+							}
+						?>
+						<div id="build-button">
+							<?php 
+								$moduleID = $_GET["id"]; 
+								echo "<a href=\"build-it-blocks-instructions.php?id=" . $moduleID. "\"><img id=\"build-image\" src=\"images/build-it.png\"/></a>"
+							?>
+						</div>
+					</div>					
+				</div>	
+			</div> <!-- caption-and-button ends here-->	
 		</div>      	
 	</div>
-	<div class="bottom-info"><?php include("biy-bottom-info.html"); ?></div>
+	<div class="bottom-info">
+		<?php include("biy-bottom-info.html"); ?>
+	</div>
 </body>
 </html>
-
