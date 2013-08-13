@@ -17,6 +17,7 @@
 	<script type="text/javascript">		
 		$(document).ready(function() {
 			$("#menu-jquery li").show(300, function(){  //300 is the speed at which show animation plays
+			changeCategory(0,0); //this makes view all selected by default
 			$('#menu-jquery li').hover(			//the hover function only plays after the show animation is finished
 				function() {					
 					$(this).css('padding', '3px 0px 0px 0px')

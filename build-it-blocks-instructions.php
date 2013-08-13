@@ -92,26 +92,26 @@
 					<script>
 						changeStep(1); //sets text to the text of step 1 on start up
 					</script>
-					<div id="build-it-button">
-						<?php
-							include("db-connect.php");
-							$module_number = $_GET["id"]; // the ID is passed by the address of the page
-							$temp = mysqli_query($con, "SELECT * FROM `module_index` WHERE `ID`=" . $module_number);  //get the query of instructions
-							$module = mysqli_fetch_array($temp);
-							$module_download_address = $module ['download-link']; //get the download link for the module (some modules only)
-							$module_download_type = $module ['download-type']; // get the type of download: plain text,e.g. "this module"
-							if($module_download_type!= ""){
-								echo "<a href=\" ".$module_download_address."\">Download ".$module_download_type."</a>"; //if the download-type is "this module", you output "...Download this module."
-							}
-						?>
-						<div id="build-button">
-							<?php 
-								$moduleID = $_GET["id"]; 
-								echo "<a href=\"build-it-blocks-overview.php?id=" . $moduleID. "\"><img src=\"images/overview-button.png\" /></a>"
-							?>
-						</div>	
-					</div>		
 				</div>
+				<div id="build-it-button">
+					<?php
+						include("db-connect.php");
+						$module_number = $_GET["id"]; // the ID is passed by the address of the page
+						$temp = mysqli_query($con, "SELECT * FROM `module_index` WHERE `ID`=" . $module_number);  //get the query of instructions
+						$module = mysqli_fetch_array($temp);
+						$module_download_address = $module ['download-link']; //get the download link for the module (some modules only)
+						$module_download_type = $module ['download-type']; // get the type of download: plain text,e.g. "this module"
+						if($module_download_type!= ""){
+							echo "<a href=\" ".$module_download_address."\">Download ".$module_download_type."</a>"; //if the download-type is "this module", you output "...Download this module."
+						}
+					?>
+					<div id="build-button">
+						<?php 
+							$moduleID = $_GET["id"]; 
+							echo "<a href=\"build-it-blocks-overview.php?id=" . $moduleID. "\"><img src=\"images/overview-button.png\" /></a>"
+						?>
+					</div>	
+				</div>		
 			</div> <!-- caption-and-button ends here-->
 		</div>
 	</div>	

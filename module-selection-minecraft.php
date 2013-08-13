@@ -17,7 +17,9 @@
 	<script type="text/javascript">		
 		$(document).ready(function() {
 			$("#menu-jquery li").show(300, function(){  //300 is the speed at which show animation plays
-			$('#menu-jquery li').hover(		//the hover function only plays after the show animation is finished		
+			changeCategory(0,0); //this makes view all selected by default
+			$('#menu-jquery li').hover(				//the hover function only plays after the show animation is finished
+				
 				function() {					
 					$(this).css('padding', '3px 0px 0px 0px')
 					.stop()
@@ -106,9 +108,6 @@
 			?>
 		</ul>
 	</div>
-	<script>
-		//changeCategory(0,0); //view all is selected by default, CAUSING ISSUES
-	</script>
 	<div class="gray-line"></div>
 	<div id="content">
 		<img class="charlotte" src="images/charlotte.png">
