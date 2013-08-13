@@ -83,8 +83,8 @@
 						}
 						mysqli_close($con);
 					?>
-					<a href="#" class="slidesjs-previous slidesjs-navigation"><i class="icon-chevron-left icon-large"></i></a> <!--the LEFT arrow -->
-					<a href="#" class="slidesjs-next slidesjs-navigation"><i class="icon-chevron-right icon-large"></i></a> <!--the RIGHT arrow -->
+					<a href="#" class="slidesjs-previous slidesjs-navigation">prev</a> <!--the LEFT arrow -->
+					<a href="#" class="slidesjs-next slidesjs-navigation">next</a> <!--the RIGHT arrow -->
 				</div>
 			</div>
 			<div id="caption-and-button">
