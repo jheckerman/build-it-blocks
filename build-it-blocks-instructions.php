@@ -1,3 +1,4 @@
+<!doctype html> <!--needed for IE-->
 <html>
 <head>
 	<LINK href="biy-stylesheet.css" rel="stylesheet" type="text/css">
@@ -20,7 +21,7 @@
 			$i=0;
 			while($steps = mysqli_fetch_array($temp)){ //every step has a description; this loop fills all the descriptions.
 				
-				echo "stepArr[".$i."]='" . $steps['step-description'] . "';" ;
+				echo "stepArr[" .$i. "]='" . $steps['step-description'] . "';" ;
 				$i++;
 			}
 		?>		
@@ -83,8 +84,8 @@
 						}
 						mysqli_close($con);
 					?>
-					<a href="#" class="slidesjs-previous slidesjs-navigation">prev</a> <!--the LEFT arrow -->
-					<a href="#" class="slidesjs-next slidesjs-navigation">next</a> <!--the RIGHT arrow -->
+					<a href="#" class="slidesjs-previous slidesjs-navigation"><p class="slider-arrow"><</p> </a> <!--the LEFT arrow -->
+					<a href="#" class="slidesjs-next slidesjs-navigation"><p class="slider-arrow">></p> </a> <!--the RIGHT arrow -->
 				</div>
 			</div>
 			<div id="caption-and-button">

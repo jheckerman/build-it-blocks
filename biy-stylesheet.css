@@ -209,7 +209,7 @@ a:hover
 }
 
 .wrapped_picture{
-	height:300px;
+	max-height:300px;
 	margin:auto;
 }
 
@@ -481,4 +481,10 @@ a:hover
 
 .new-image{
 height: 233px;
+}
+
+.slider-arrow{
+font-weight:bold; 
+font-size:16pt;
+
 }
