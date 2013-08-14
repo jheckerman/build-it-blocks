@@ -90,7 +90,7 @@
 			$curr_author_name = $curr_author['name']; // get the author's name
 			$curr_date = date_format(date_create($curr_module['date-posted']), 'm/d/Y'); // we need first to convert the date from MySQL format to 
 			//echoing the HTML for the title, author and date:
-			echo "<div class='title-wrapper'><div class=\"module-title\">".$curr_title . "</div ><div  class=\"module-subtitle\">Added by " . $curr_author_name. " on " . $curr_date. "</div></div>";
+			echo "<div class='title-wrapper'><div class=\"module-title\">".$curr_title . "</div ><div  class=\"module-subtitle\">Added by <a style='color:blue;' href=\"". $curr_author['website'] ."\">" . $curr_author_name. "</a> on " . $curr_date. "</div></div>"; //note: inline styling needed to override styling for links
 		?>
 		<div class="line"></div>
 		<br>
