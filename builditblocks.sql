@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4
+-- version 3.5.1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Aug 12, 2013 at 04:58 PM
--- Server version: 5.6.12-log
--- PHP Version: 5.4.16
+-- Generation Time: Aug 14, 2013 at 08:02 PM
+-- Server version: 5.5.24-log
+-- PHP Version: 5.3.13
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -19,8 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `builditblocks`
 --
-CREATE DATABASE IF NOT EXISTS `builditblocks` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
-USE `builditblocks`;
 
 -- --------------------------------------------------------
 
@@ -44,8 +42,8 @@ CREATE TABLE IF NOT EXISTS `applications` (
 --
 
 INSERT INTO `applications` (`ID`, `moduleID`, `picture`, `description`, `title`, `link`, `youtube-embedID`) VALUES
-(1, 1, 'module-images/clock-lego-2.jpg', 'Here is one application of this module', 'Clock Thing', 'link', NULL),
-(2, 1, 'module-images/micro-motor-vertical-tp.jpg', 'Here is another application of this module', 'Hat?', 'link', NULL),
+(1, 1, 'module-images/bib-lego/bib-lego-apps/clock-gear-train-overview.png', 'Here is one application of this module', 'Clock Thing', 'link', NULL),
+(2, 1, 'module-images/bib-lego/bib-lego-apps/hat-spinner.png', 'Here is another application of this module', 'Hat?', 'link', NULL),
 (3, 2, 'module-images/applications-img/not-minecraft.png', 'If you want a piston door to remain open even when the lever is off.', 'Piston Door', NULL, NULL),
 (4, 5, 'module-images/applications-img/and-minecraft.png', 'Can be used if you want a player to have to pull two levers in order to turn on a light or activate another Redstone device.', 'Two Lever Lights', NULL, NULL),
 (5, 6, 'module-images/applications-img/t-flip-flop-minecraft.png', 'If you want a door to remain open, but want it to be opened by a button.', 'Button Opened Door', NULL, NULL),
@@ -64,6 +62,7 @@ CREATE TABLE IF NOT EXISTS `author` (
   `authorID` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(200) DEFAULT NULL,
   `bio` varchar(750) NOT NULL,
+  `website` varchar(100) NOT NULL,
   PRIMARY KEY (`authorID`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
@@ -71,9 +70,9 @@ CREATE TABLE IF NOT EXISTS `author` (
 -- Dumping data for table `author`
 --
 
-INSERT INTO `author` (`authorID`, `name`, `bio`) VALUES
-(1, 'Val :))', 'We here at BIY are super amazing and awesome, me included.'),
-(5, 'Dan Broun', '');
+INSERT INTO `author` (`authorID`, `name`, `bio`, `website`) VALUES
+(1, 'Val :))', 'We here at BIY are super amazing and awesome, me included.', 'http://www.invention-universe.com/val/'),
+(5, 'Dan Broun', '', 'http://www.build-it-yourself.com/dev/interns/dan-broun/index.html');
 
 -- --------------------------------------------------------
 
@@ -185,9 +184,9 @@ CREATE TABLE IF NOT EXISTS `module_index` (
 --
 
 INSERT INTO `module_index` (`ID`, `partnerID`, `name`, `description`, `difficulty`, `date-posted`, `type`, `subcategoryID`, `authorID`, `popularity`, `icon`, `icon-tooltip`, `icon-alt-text`, `download-link`, `download-type`) VALUES
-(1, 1, 'Clock Gear Train', 'It''s a clock gear train', 2, '2013-06-03', 2, 1, 1, 0, 'module-images/icons/clock-lego.jpg', 'http://1-ps.googleusercontent.com/h/www.catgifpage.com/gifs/186.gif.pagespeed.ce.Z_8F-7SNTG.gif', '', 'http://www.invention-universe.com/val/', 'Val''s website'),
-(2, 1, 'NOT Gate', 'The NOT gate, otherwise known as an invertor, changes the output of the gate to the opposite of the input.  For instance, if the input is on, the output is off and vice versa.', 1, '2013-07-15', 5, 1, 5, 0, 'module-images/icons/not-minecraft-100.png', 'http://1-ps.googleusercontent.com/h/www.catgifpage.com/gifs/185.gif.pagespeed.ce.yvDfYyj82d.gif', '', 'http://www.invention-universe.com/val/', 'Val''s website'),
-(5, 1, 'AND Gate', 'The AND gate changes the output of the gate to on when both inputs are on and off when one of the inputs is or when they are both off.', 1, '2013-07-18', 5, 1, 1, 0, 'module-images/icons/and-minecraft-100.png', 'http://www.catgifpage.com/gifs/184.gif', '', 'http://www.invention-universe.com/val/', 'Val''s website'),
+(1, 1, 'Clock Gear Train', 'It''s a clock gear train', 2, '2013-06-03', 2, 1, 1, 0, 'module-images/icons/clock-lego.jpg', 'http://1-ps.googleusercontent.com/h/www.catgifpage.com/gifs/186.gif.pagespeed.ce.Z_8F-7SNTG.gif', '', 'http://www.invention-universe.com/val/', 'Schematic'),
+(2, 1, 'NOT Gate', 'The NOT gate, otherwise known as an invertor, changes the output of the gate to the opposite of the input.  For instance, if the input is on, the output is off and vice versa.', 1, '2013-07-15', 5, 1, 5, 0, 'module-images/icons/not-minecraft-100.png', 'http://1-ps.googleusercontent.com/h/www.catgifpage.com/gifs/185.gif.pagespeed.ce.yvDfYyj82d.gif', '', 'http://www.invention-universe.com/val/', 'Schematic'),
+(5, 1, 'AND Gate', 'The AND gate changes the output of the gate to on when both inputs are on and off when one of the inputs is or when they are both off.', 1, '2013-07-18', 5, 1, 1, 0, 'module-images/icons/and-minecraft-100.png', 'http://www.catgifpage.com/gifs/184.gif', '', 'http://www.invention-universe.com/val/', 'Schematic'),
 (6, 1, 'T-Flip-Flop', 'Changes a pulse into a constant output.  Changes a button into a lever essentially.', 2, '2013-07-18', 5, 1, 5, 0, 'module-images/icons/t-flip-flop-minecraft-100.png', 'http://www.catgifpage.com/gifs/179.gif', '', '', ''),
 (7, 1, 'NAND Gate', 'When the two inputs are on the output is off.  Whatever other state the Gate is in the output is on.', 1, '2013-07-18', 5, 1, 5, 0, 'module-images/icons/nand-minecraft-100.png', 'http://www.catgifpage.com/gifs/176.gif', '', '', ''),
 (8, 1, 'XOR Gate', 'If one input is on, the output is on.  In any other state the output is off.', 2, '2013-07-18', 5, 1, 5, 0, 'module-images/icons/xor-minecraft-100.png', 'http://24.media.tumblr.com/532e270364df9a8550381f0820cfcaf3/tumblr_mr0c6b3Wjl1s199fdo1_250.gif', '', '', ''),
