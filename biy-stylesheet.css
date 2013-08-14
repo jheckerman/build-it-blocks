@@ -453,7 +453,7 @@ a:hover
 	height:1px;
 	width:800px;
 	background-color:#404040;
-	margin: 0px auto;
+	margin: 10px auto;
 	font-size:1px; /*need to do this for IE*/
 }
 
@@ -486,5 +486,5 @@ height: 233px;
 .slider-arrow{
 font-weight:bold; 
 font-size:16pt;
-
+margin-top:-10px;
 }

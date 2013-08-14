@@ -51,6 +51,33 @@
 </head>
 <body>
 	<?php include("bib-header-menu.php"); ?>
+	<script>
+		<?php // this script gets the type of the module, then it will set the appropriate button in the menu bar to be down
+			include("db-connect.php");
+			$module = $_GET["id"]; // the ID is passed by the address of the page
+			$temp = mysqli_query($con, "SELECT * FROM `module_index` WHERE `ID`=" . $module); //query for the module
+			$curr_module = mysqli_fetch_array($temp);
+			$curr_type = $curr_module['type']; //this gets the type of the module
+			if($curr_type == 1){
+				echo "var divId = \"junk\";" ; //echo a javascript variable containing the name of the element to be affected
+			}
+			if($curr_type == 2){
+				echo "var divId = \"lego\";" ; //echo a javascript variable containing the name of the element to be affected
+			}
+			if($curr_type == 3){
+				echo "var divId = \"art\";" ; //echo a javascript variable containing the name of the element to be affected
+			}
+			if($curr_type == 4){
+				echo "var divId = \"programming\";" ; //echo a javascript variable containing the name of the element to be affected
+			}
+			if($curr_type == 5){
+				echo "var divId = \"minecraft\";" ; //echo a javascript variable containing the name of the element to be affected
+			}
+		?>
+		//divId should = junk if this is a junk module, = lego if lego module ... etc
+		document.getElementById(divId).style.backgroundImage="url('images/button-down.png')"; //change the background image to let users know that they are on this module selection page
+		document.getElementById(divID).onmouseout=""; //remove the mouseout event so that it does not change back when hovering
+	</script>
 	<div class="centered-div">
 		<?php // this script gets the title, author and date of the module; they are displayed as a top bar.
 			include("db-connect.php");
